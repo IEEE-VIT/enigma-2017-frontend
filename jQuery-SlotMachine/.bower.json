@@ -1,0 +1,83 @@
+{
+  "name": "jQuery-SlotMachine",
+  "description": "A simple jQuery plugin to make slot machine animation effect",
+  "version": "3.0.1",
+  "keywords": [
+    "slots",
+    "gambling",
+    "lists",
+    "fun",
+    "zany",
+    "winning",
+    "machine"
+  ],
+  "authors": [
+    {
+      "name": "Jose Luis Represa",
+      "email": "codex2r@gmail.com",
+      "url": "https://github.com/josex2r"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/josex2r/jQuery-SlotMachine.git"
+  },
+  "main": "./dist/jquery.slotmachine.min.js",
+  "bugs": "https://github.com/josex2r/jQuery-SlotMachine/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/josex2r/jQuery-SlotMachine/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "ignore": [
+    "README*",
+    "LICENSE*",
+    "CONTRIBUTING.md",
+    "**/*.sass",
+    "**/*.coffee",
+    "**/sample.*",
+    "**/rainbow.js",
+    "**/rainbow.css",
+    "**/jquery.js",
+    "**/jquery.css",
+    "node_modules",
+    "libs",
+    "samples",
+    "spec",
+    "src",
+    "bourbon",
+    "neat",
+    "packages",
+    "images",
+    "img",
+    "css",
+    "test",
+    "Cakefile*",
+    "Rakefile*",
+    "Gemfile*",
+    "Gruntfile*",
+    ".git*",
+    ".travis*",
+    "package.json",
+    "*bower.json",
+    "*jquery.json",
+    "index*",
+    ".travis.yml",
+    ".eslintrc"
+  ],
+  "homepage": "https://github.com/josex2r/jQuery-SlotMachine",
+  "_release": "3.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.1",
+    "commit": "76e03e8b4a1ba8c6ee8209b5183a1e54a174d55a"
+  },
+  "_source": "https://github.com/josex2r/jQuery-SlotMachine.git",
+  "_target": "^3.0.1",
+  "_originalSource": "jquery-slotmachine",
+  "_direct": true
+}
