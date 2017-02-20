@@ -13,6 +13,9 @@ body {
     overflow: hidden;
 }
 
+#enigma_arrow {
+	margin-top: 160px;
+}
 /* Preloader */
 
 #preloader {
@@ -53,6 +56,7 @@ body {
     display: inline-block;
     cursor: pointer;
 }
+
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
@@ -335,6 +339,10 @@ hr {
 	padding: 25px 0 20px 0;
 }
 /* About Section */
+#about_text {
+	font-size: 18px;
+	color: #0e1415;
+}
 #about {
 	padding: 50px 0;
 	background: #f6f6f6;
@@ -644,6 +652,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #contact_btn {
 	margin-bottom: 30px;
 }
+}
 @media(min-width:0px) {
 .intro {
 	height: 100%;
@@ -675,4 +684,10 @@ header .intro-text {
 	padding-top: 150px;
 	padding-bottom: 150px;
 }
+}
+
+@media(min-height: 582px){
+	#enigma_arrow {
+		margin-top: 220px;
+	}
 }
