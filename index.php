@@ -76,7 +76,7 @@
  <div class="login modal-content" id="register">
         <span class="close">&times;</span>
         <h1>Register</h1>
-        <p id="login_line"> Lorem Ipsum Dolor.Sed ut perspiciatis unde omnis iste natus.</p>
+        <p id="login_line"></p> <!-- Tagline needs to be added -->
         
                 <div class="section-title center">
         <div class="col-md-8 col-md-offset-2">
