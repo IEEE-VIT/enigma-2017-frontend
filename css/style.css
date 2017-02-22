@@ -13,6 +13,9 @@ body {
     overflow: hidden;
 }
 
+#enigma_arrow {
+	margin-top: 160px;
+}
 /* Preloader */
 
 #preloader {
@@ -44,7 +47,7 @@ body {
 }
 
 #headd {
-	height: 600px; 
+	height: 600px;
 	background-color:#656c6d;
 }
 /* Popup container */
@@ -53,6 +56,7 @@ body {
     display: inline-block;
     cursor: pointer;
 }
+
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
@@ -91,7 +95,7 @@ body {
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
+    from {opacity: 0;}
     to {opacity: 1;}
 }
 
@@ -99,7 +103,7 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
- 
+
  /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -143,7 +147,7 @@ body {
 }
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top: -300px; opacity: 0} 
+    from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
 
@@ -318,7 +322,7 @@ hr {
 }
 /* Home Section */
 .intro {
-	
+
 	width: 100%;
 	height: auto;
 	padding: 50px 0;
@@ -335,6 +339,10 @@ hr {
 	padding: 25px 0 20px 0;
 }
 /* About Section */
+#about_text {
+	font-size: 18px;
+	color: #0e1415;
+}
 #about {
 	padding: 50px 0;
 	background: #f6f6f6;
@@ -381,7 +389,7 @@ hr {
 }
 
 .enig2016-box h4 {
-	
+
 	font-size: 20px;
 	font-weight: 400;
 	margin-left: 5px;
@@ -390,7 +398,7 @@ hr {
 	font-size: 52px;
 	font-weight: 600;
 	display: block;
-	
+
 	padding: 0;
 	margin: 0;
 }
@@ -518,8 +526,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline-offset: none;
 }
 
-								/*Many page style css*/ 
- 
+								/*Many page style css*/
+
 
 #login , #register {
 	position: relative;
@@ -564,7 +572,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	-o-transform: rotate(-3deg);
 	transform: rotate(-3deg);
 	top: 0;
-	z-index: -1; 
+	z-index: -1;
 }
 #register:after {
 	-webkit-transform: rotate(2deg);
@@ -644,6 +652,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #contact_btn {
 	margin-bottom: 30px;
 }
+}
 @media(min-width:0px) {
 .intro {
 	height: 100%;
@@ -675,4 +684,10 @@ header .intro-text {
 	padding-top: 150px;
 	padding-bottom: 150px;
 }
+}
+
+@media(min-height: 582px){
+	#enigma_arrow {
+		margin-top: 220px;
+	}
 }
