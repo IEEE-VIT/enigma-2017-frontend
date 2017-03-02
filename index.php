@@ -76,7 +76,7 @@
  <div class="login modal-content" id="register">
         <span class="close">&times;</span>
         <h1>Register</h1>
-        <p id="login_line"> Lorem Ipsum Dolor.Sed ut perspiciatis unde omnis iste natus.</p>
+        <p id="login_line"></p> <!-- Register Tagline -->
         
                 <div class="section-title center">
         <div class="col-md-8 col-md-offset-2">
@@ -428,7 +428,7 @@ span.onclick = function() {
 <div id="footer">
   <div class="container text-center">
     <div class="fnav">
-      <p>Copyright © 2016 <a href="http://www.facebook.com/arushit.mudgal" target="_blank">Arushit Mudgal.</a></p>
+      <p>Copyright © 2017 <a href="http://www.facebook.com/ieeevit" target="_blank"IEEE-VIT</a></p>
     </div>
   </div>
 </div>
