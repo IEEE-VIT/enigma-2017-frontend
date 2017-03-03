@@ -430,12 +430,11 @@
       <script type="text/javascript" src="js/SmoothScroll.js"></script>
       <script type="text/javascript" src="js/jquery.counterup.js"></script>
       <script type="text/javascript" src="js/waypoints.js"></script>
-      <script type="text/javascript" src="js/contact_us.js"></script>
+      <script type="text/javascript" src="js/connections.js"></script>
       <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
 
       <script type="text/javascript" src="jQuery-SlotMachine/dist/jquery.slotmachine.js"></script>
-
 
       <!-- jQuery Plugin
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
