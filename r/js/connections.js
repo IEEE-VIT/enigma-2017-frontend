@@ -2,7 +2,7 @@ $(document).ready(function(){
   console.log("Document Ready!");
   var x_access_token = Cookies.get('x-access-token');
   $.ajax({
-      url: "http://127.0.0.1:3000/solve/question",
+      url: "https://enigma2.herokuapp.com/solve/question",
       type: "GET",
       datatype: "json",
       contentType: "application/json; charset=utf-8",
@@ -11,7 +11,7 @@ $(document).ready(function(){
         "x-access-token":x_access_token
       },
       success: function(message, textStatus, request) {
-        alert(message.question);
+        $('#question_id').html(message.question);
       }
     }
   );
