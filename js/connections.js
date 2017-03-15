@@ -1,4 +1,9 @@
-$(function() {
+$(document).ready(function(){
+
+  if(Cookies.get('x-access-token')){
+    window.location.replace("./r/ques.html");
+  }
+
   $("#loginForm").submit(function(e) {
     e.preventDefault();
     var email = $("input#email").val();
@@ -90,9 +95,4 @@ $(function() {
       },
     });
   });
-});
-
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-  $('#success').html('');
 });
