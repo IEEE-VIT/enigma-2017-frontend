@@ -19,40 +19,33 @@ limitations under the License
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Material Design Lite</title>
+  <title>Home | Enigma 2017</title>
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
+  
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Material Design Lite">
   <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#3372DF">
-
-
-  <link rel="shortcut icon" href="images/favicon.png">
   <script type="text/javascript">
-  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
 
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
-  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    console.log("Close");
-    document.body.style.backgroundColor = "white";
-  }
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      console.log("Close");
+      document.body.style.backgroundColor = "white";
+    }
   </script>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -86,7 +79,9 @@ limitations under the License
     <main class="mdl-layout__content mdl-color--grey-100" id="main" >
       <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 90vh; text-align: center; background-color:#7ABED3;">
         <span style="font-size:30px;cursor:pointer; position: absolute; left: 40px; top: 50px;" onclick="openNav()">&#9776;</span>
+
         <span style="font-size:30px;position: absolute; right: 40px; top: 50px;">Score: <span id="score"></span></span>
+
         <div style="width: inherit;" id="ques">
           <h2 style="margin-top: -10px; margin-right: auto;margin-left: auto;"" id="question_id">Q1.) Hello mr DJ, meraa gaana please say</h2>
           <img src="images/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 60px;">
