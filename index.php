@@ -433,7 +433,7 @@
       <script type="text/javascript" src="js/connections.js"></script>
       <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
-
+      <script type="text/javascript" src="js/js.cookie.js"></script>
       <script type="text/javascript" src="jQuery-SlotMachine/dist/jquery.slotmachine.js"></script>
 
       <!-- jQuery Plugin

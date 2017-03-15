@@ -14,12 +14,13 @@ $(function() {
         password: pass
       }),
       cache: false,
-      success: function(message) {
+      success: function(message, textStatus, request) {
+        Cookies.set('x-access-token', message.token);
         $('#success').html("<div class='alert alert-success'>");
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
         $('#success > .alert-success')
-        .append("<strong>" + JSON.parse(message).message + "</strong>");
+        .append("<strong>" + message.message + "</strong>");
         $('#success > .alert-success')
         .append('</div>');
       },
