@@ -23,7 +23,7 @@ $(function() {
         //redirect to the question page on successful login
         //TODO: Check for successful login else show error
 
-        window.location.replace("./r/home.html");
+        window.location.replace("./r/ques.html");
         $('#success').html("<div class='alert alert-success'>");
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
