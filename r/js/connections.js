@@ -18,6 +18,11 @@ $(document).ready(function(){
     }
   );
 
+  $('#logout_butt a').click(function(e) {
+    Cookies.remove('x-access-token');
+    window.location.replace("../index.php");
+  });
+
   $("#answerForm").submit(function(e) {
     e.preventDefault();
     var answer = $("input#answer_id").val();
@@ -35,7 +40,7 @@ $(document).ready(function(){
       }),
       cache: false,
       success: function(message, textStatus, request) {
-          alert(message.message);
+          window.location.replace("ques.html");
       }
     });
   });
