@@ -74,7 +74,7 @@
           <!-- <p id="login_line"> Lorem Ipsum Dolor.</p> -->
 
           <div class="section-title center">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2" style="margin-left: 16.677%; width: 66.66666667%";>
               <form name="login_form" id="loginForm" enctype="application/json" method="post">
                 <div class="row">
 
@@ -89,6 +89,7 @@
                   </div>
 
                 </div>
+                <div id="loader_login" style="display: none;"><img src="img/login.gif"></div>
                 <button type="submit" class="btn btn-default">Login</button>
               </form>
             </div>
@@ -136,7 +137,7 @@
                   </div>
 
                 </div>
-                <div id=loader_reg><img src="img/default.gif" style="display: none;"></div>
+                <div id="loader_reg"  style="display: none;"><img src="img/default.gif"></div>
                 <div id="success"></div>
 
                 <button id="signupButton" type="submit" class="btn btn-default">Register</button>
