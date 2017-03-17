@@ -19,7 +19,15 @@ $(document).ready(function(){
         password: pass
       }),
       cache: false,
+
+      beforeSend: function(){
+        $('#loader_login').show();
+      },
+     
       success: function(message, textStatus, request) {
+
+        //Loader
+        $('#loader_login').hide();
 
         //sets session cookie. TODO: Check domain and timeout problems
         Cookies.set('x-access-token', message.token);
@@ -73,8 +81,14 @@ $(document).ready(function(){
         password: pass
       }),
       cache: false,
+      
+      beforeSend: function(){
+        $('#loader_reg').show();
+      },
+    
       success: function(message) {
         // Success message
+        $("#loader_reg").hide();
         $('#success').html("<div class='alert alert-success'>");
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
