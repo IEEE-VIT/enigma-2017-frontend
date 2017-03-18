@@ -1,8 +1,13 @@
 $(document).ready(function(){
 
+  $("question_id").html("Testing");
+  $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
+
   if(Cookies.get('x-access-token')){
     window.location.replace("./r/ques.html");
   }
+
+  
 
   $("#loginForm").submit(function(e) {
     e.preventDefault();
@@ -96,6 +101,10 @@ $(document).ready(function(){
         .append("<strong>" + message.message + "</strong>");
         $('#success > .alert-success')
         .append('</div>');
+        setTimeout(function(){
+           document.getElementById("myModal").style.display = "none";
+        },2000)
+       
       },
       error: function() {
         // Fail message

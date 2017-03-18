@@ -65,7 +65,7 @@
   <!-- About Section -->
   <div id="head" class="text-center" style="">
     <div style="float:right; margin-right: 20px; margin-top: 25px; font-size: 20px;">
-      <button id="myBtn" class="btn-default" onclick="popup()">Login</button>
+      <button id="myBtn" class="btn-default" onmouseover="popup()">Login</button>
       <button id="signupp" class="btn-default">Signup</button>
       <div class="popup">
         <div class="popuptext" id="myPopup">
