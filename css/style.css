@@ -591,6 +591,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 
 /* Contact us Section #0f2c31 */
+.dark_btn {
+	color: #f3eded;
+	border-color: #000000;
+}
 #contact_us {
 	padding: 50px 0 0;
 	background: #0f2c31;
