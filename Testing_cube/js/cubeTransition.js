@@ -1,10 +1,10 @@
 (function($) {
 
-	var length = $('#cubeTransition>div').length,
+	var length = $('#cubeTransition>div>div').length,
 		current = 1,
 		next = 1,
 		outClass, inClass, onGoing = false;
-		$('#cubeTransition>div:eq(0)').addClass('visible');
+		$('#cubeTransition>div>div:eq(0)').addClass('visible');
 
 	for (i = 0; i < length; i++) {
 		var bullet = $("<li></li>");
@@ -39,9 +39,9 @@
 	}
 
 	function show() {
-		$('#cubeTransition>div:eq(' + (next - 1) + ')').addClass('visible');
-		$('#cubeTransition>div:eq(' + (current - 1) + ')').addClass(outClass);
-		$('#cubeTransition>div:eq(' + (next - 1) + ')').addClass(inClass);	
+		$('#cubeTransition>div>div:eq(' + (next - 1) + ')').addClass('visible');
+		$('#cubeTransition>div>div:eq(' + (current - 1) + ')').addClass(outClass);
+		$('#cubeTransition>div>div:eq(' + (next - 1) + ')').addClass(inClass);	
 		$('#bullets>li:eq(' + (current - 1) + ')').removeClass('active');
 		$('#bullets>li:eq(' + (next - 1) + ')').addClass('active');
 		setTimeout(function() {
@@ -50,12 +50,12 @@
 		
 		animationOut(current - 1)
 		setTimeout(function() {
-			$('#cubeTransition>div:eq(' + (current - 1) + ')').removeClass('visible');
+			$('#cubeTransition>div>div:eq(' + (current - 1) + ')').removeClass('visible');
 		}, 500)
 
 		setTimeout(function() {
-			$('#cubeTransition>div:eq(' + (current - 1) + ')').removeClass(outClass);
-			$('#cubeTransition>div:eq(' + (next - 1) + ')').removeClass(inClass);
+			$('#cubeTransition>div>div:eq(' + (current - 1) + ')').removeClass(outClass);
+			$('#cubeTransition>div>div:eq(' + (next - 1) + ')').removeClass(inClass);
 			
 			animationIn(next - 1)
 			current = next;
