@@ -17,6 +17,7 @@
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -44,6 +45,7 @@ html, body {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
+    text-decoration: none;
 }
 
 /* Position and style the close button (top right corner) */
