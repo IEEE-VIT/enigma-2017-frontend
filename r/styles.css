@@ -114,7 +114,21 @@ html, body {
   margin-left: 10%;
 }
 
-@media( max-width: 991px){
+
+.lock-img {
+  width: 2%; 
+  height: 2%; 
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+#bg-lock {
+  width: 3%;
+  height: 3%;
+}
+
+
+@media( max-width: 950px){
   #ques {
     margin-top: 60px;
   }
@@ -134,5 +148,24 @@ html, body {
   #result_table {
     font-size: 12px;
   }
+
+  .lock-img {
+    width: 4%; 
+    height: 4%; 
+    margin-left: 5%; 
+    margin-right: 5%;
+    margin-top: 6%;
+  }
+
+  #bg-lock {
+    width: 6%;
+    height: 6%;
+  }
+
+  #trophy {
+    width: 60%;
+    height: 60%;
+  }
+
 
 }

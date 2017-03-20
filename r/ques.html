@@ -99,8 +99,14 @@ limitations under the License
           <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-left: 10px;">
             Submit
           </button>
-          <p style="margin-top: 3%; font-size: 20px;"><strong>...</strong><img src="images/unlock.png" style="width: 2%; height: 2%; margin-left: 5%; margin-right: 5%;"> <img src="images/lock.png" style="width: 3%; height: 3%;margin-left: 5%; margin-right: 5%;"> <img src="images/lock.png" style="width: 2%; height: 2%; margin-left: 5%; margin-right: 5%;"><strong>...</strong></p>
+          <p style="margin-top: 3%; font-size: 20px;">
+            <strong>...</strong>
+            <img src="images/unlock.png" class="lock-img"> 
+            <img src="images/lock.png" class="lock-img" id="bg-lock"> 
+            <img src="images/lock.png" class="lock-img">
+            <strong>...</strong></p>
         </form>
+        <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;" onclick=""><img src="images/trophy.png" id="trophy"></span>
 
       </div>
     </main>
