@@ -14,7 +14,7 @@
   <!-- Stylesheet
   ================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="jQuery-SlotMachine/dist/jquery.slotmachine.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="SlotMachine/jquery.slotmachine.css" type="text/css" media="screen" />
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,3a00" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
   <script type="text/javascript">
@@ -57,7 +57,7 @@
   <script type="text/javascript">
  function checkName(){
       if($('#name').val()!==''){
-        $('#correct-name').html('<img src="img/tick.png" width="20" height="20"/>');
+        $('#correct-name').html('<img src="img/tick.png" width="25" height="25"/>');
       }
       else{
         $('#correct-name').html('<img src="img/cross.png" width="25" height="25"/>');
@@ -170,7 +170,9 @@ function confirmPass(){
                       <input type="text" id="name" name="name" class="form-control" placeholder="Name" size="30" onkeyup="checkName()" required="required">
                     </div>
                     <div class="image-container">
-                      <span id="correct-name" style="float: right;"></span>
+                      <span id="correct-name" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
                     </div>
                   </div>
 
@@ -178,7 +180,9 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="text" id="emailReg" name="email" class="form-control" placeholder="Email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email Id')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="checkEmail()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-emailReg" style="float: right;"></span></div>
+                      <span id="correct-emailReg" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span></div>
                     </p>
                   </div>
 
@@ -186,7 +190,9 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="text" id="contact" name="contact" class="form-control" placeholder="Phone no." size="30" onkeyup="checkPh()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-contact" style="float: right;"></span>
+                      <span id="correct-contact" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
                     </div>
                   </div>
 
@@ -194,7 +200,9 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="password" id="passwordReg" name="password" class="form-control" placeholder="Enter new Password" size="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" oninvalid="setCustomValidity('Must contain UpperCase, LowerCase and Number')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="checkPassword()" required="required"></div>
                       <div class="image-container">
-                        <span id="correct-passwordReg" style="float: right;"></span>
+                        <span id="correct-passwordReg" style="float: right;">
+                          <img src="img/blank.png" width="25" height="25">
+                        </span>
                       </div>
                   </div>
 
@@ -202,7 +210,9 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="password" id="conf_pass" class="form-control" placeholder="Confirm Password" size="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" oninvalid="setCustomValidity('Must contain UpperCase, LowerCase and Number')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="confirmPass()" required="required"></div>
                     <div class="image-container">
-                        <span id="correct-conf_pass" style="float: right;"></span>
+                        <span id="correct-conf_pass" style="float: right;">
+                          <img src="img/blank.png" width="25" height="25">
+                        </span>
                     </div>
                   </div>
 
@@ -506,7 +516,7 @@ function confirmPass(){
       <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/js.cookie.js"></script>
-      <script type="text/javascript" src="jQuery-SlotMachine/dist/jquery.slotmachine.js"></script>
+      <script type="text/javascript" src="SlotMachine/jquery.slotmachine.js"></script>
 
       <!-- jQuery Plugin
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->

@@ -14,7 +14,7 @@
   <!-- Stylesheet
   ================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="jQuery-SlotMachine/dist/jquery.slotmachine.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="SlotMachine/jquery.slotmachine.css" type="text/css" media="screen" />
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,3a00" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
   <script type="text/javascript">
@@ -90,7 +90,7 @@
 
                 </div>
                 <div id="loader_login" style="display: none;"><img src="img/login.gif"></div>
-                <button type="submit" class="btn btn-default">Login</button>
+                <button type="submit" class="dark_btn btn btn-default">Login</button>
               </form>
             </div>
           </div>
@@ -412,7 +412,7 @@
                 <p class="help-block text-danger"></p>
               </div>
               <div id="success"></div>
-              <button type="submit" class="btn btn-default" id="contact_btn">Send Message</button>
+              <button type="submit" class="dark_btn btn btn-default" id="contact_btn">Send Message</button>
             </form>
           </div>
         </div>
@@ -436,7 +436,7 @@
       <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/js.cookie.js"></script>
-      <script type="text/javascript" src="jQuery-SlotMachine/dist/jquery.slotmachine.js"></script>
+      <script type="text/javascript" src="SlotMachine/jquery.slotmachine.js"></script>
 
       <!-- jQuery Plugin
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->

@@ -34,12 +34,12 @@
 @keyframes rotateCubeTopOut {
 	50% {
 		animation-timing-function: ease-out;
-		transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
+		transform: translateX(-50%) translateZ(-200px) rotateY(45deg);  //X and Y interchange
 	}
 
 	100% {
 		opacity: .3;
-		transform: translateY(-100%) rotateX(90deg);	
+		transform: translateX(-100%) rotateY(90deg);	 //X and Y interchange
 	}
 	
 }
@@ -47,12 +47,12 @@
 @-webkit-keyframes rotateCubeTopOut {
 	50% {
 		-webkit-animation-timing-function: ease-out;
-		-webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
+		-webkit-transform: translateX(-50%) translateZ(-200px) rotateY(45deg); //X and Y interchange
 	}
 
 	100% {
 		opacity: .3;
-		-webkit-transform: translateY(-100%) rotateX(90deg);	
+		-webkit-transform: translateX(-100%) rotateY(90deg);	 //X and Y interchange
 	}
 	
 }
@@ -60,24 +60,24 @@
 @keyframes rotateCubeTopIn {
 	0% {
 		opacity: .3;
-		transform: translateY(100%) rotateX(-90deg);
-	}
+		transform: translateX(100%) rotateY(-90deg);
+	} //X and Y interchange
 
 	50% {
 		animation-timing-function: ease-out;
-		transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
+		transform: translateX(50%) translateZ(-200px) rotateY(-45deg); //X and Y interchange
 	}
 }
 
 @-webkit-keyframes rotateCubeTopIn {
 	0% {
 		opacity: .3;
-		-webkit-transform: translateY(100%) rotateX(-90deg);
+		-webkit-transform: translateX(100%) rotateY(-90deg); //X and Y interchange
 	}
 
 	50% {
 		-webkit-animation-timing-function: ease-out;
-		-webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
+		-webkit-transform: translateX(50%) translateZ(-200px) rotateY(-45deg); //X and Y interchange
 	}
 }
 
