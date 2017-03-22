@@ -26,6 +26,7 @@ $(document).ready(function(){
       cache: false,
 
       beforeSend: function(){
+        $('#loginButton').hide();
         $('#loader_login').show();
       },
      
@@ -50,6 +51,7 @@ $(document).ready(function(){
         .append('</div>');
       },
       error: function() {
+        $('#loginButton').show();
         // Fail message
         $('#success').html("<div class='alert alert-danger'>");
         $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -88,6 +90,7 @@ $(document).ready(function(){
       cache: false,
       
       beforeSend: function(){
+        $('#signupButton').hide();
         $('#loader_reg').show();
       },
     
@@ -107,6 +110,9 @@ $(document).ready(function(){
        
       },
       error: function() {
+        
+        $('#signupButton').show();
+
         // Fail message
         $('#success').html("<div class='alert alert-danger'>");
         $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")

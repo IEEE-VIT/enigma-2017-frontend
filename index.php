@@ -90,7 +90,7 @@
 
                 </div>
                 <div id="loader_login" style="display: none;"><img src="img/login.gif"></div>
-                <button type="submit" class="dark_btn btn btn-default">Login</button>
+                <button id="loginButton" type="submit" class="dark_btn btn btn-default">Login</button>
               </form>
             </div>
           </div>
