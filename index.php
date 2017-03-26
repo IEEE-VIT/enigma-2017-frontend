@@ -193,12 +193,12 @@ function confirmPass(){
                       <span id="correct-emailReg" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span></div>
-                    
+
                   </div>
 
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
-                      <input type="text" id="reg_no" name="reg_no" class="form-control" placeholder="VIT Registeration number" size="30" onkeyup="checkReg()" required="required">
+                      <input type="text" id="registration" name="reg_no" class="form-control" placeholder="Registration number" size="30" onkeyup="checkReg()" required="required">
                     </div>
                     <div class="image-container">
                       <span id="correct-reg" style="float: right;">
@@ -245,7 +245,7 @@ function confirmPass(){
               </form>
             </div>
           </div>
-        </div>        
+        </div>
         </div>
       </div>
     </div>
