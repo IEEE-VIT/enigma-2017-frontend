@@ -7,7 +7,7 @@ $(document).ready(function(){
     window.location.replace("./r/ques.html");
   }
 
-  
+
 
   $("#loginForm").submit(function(e) {
     e.preventDefault();
@@ -29,7 +29,7 @@ $(document).ready(function(){
         $('#loginButton').hide();
         $('#loader_login').show();
       },
-     
+
       success: function(message, textStatus, request) {
 
         //Loader
@@ -39,8 +39,9 @@ $(document).ready(function(){
         Cookies.set('x-access-token', message.token);
 
         //redirect to the question page on successful login
-        //TODO: Check for successful login else show error
-        window.location.replace("./r/ques.html");
+        if(message.code == '0'){
+          window.location.replace("./r/ques.html");
+        }
 
         $('#success').html("<div class='alert alert-success'>");
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -70,6 +71,7 @@ $(document).ready(function(){
     var email = $("input#emailReg").val();
     var phone = $("input#contact").val();
     var pass = $("input#passwordReg").val();
+    var reg = $("input#registration").val();
     var conf_pass = $("input#conf_pass").val();
     var firstName = name; // For Success/Failure Message
     // Check for white space in name for Success/Fail message
@@ -85,15 +87,16 @@ $(document).ready(function(){
         name: name,
         email: email,
         contact: phone,
-        password: pass
+        password: pass,
+        registration_id: reg
       }),
       cache: false,
-      
+
       beforeSend: function(){
         $('#signupButton').hide();
         $('#loader_reg').show();
       },
-    
+
       success: function(message) {
         // Success message
         $("#loader_reg").hide();
@@ -107,10 +110,10 @@ $(document).ready(function(){
         setTimeout(function(){
            document.getElementById("myModal").style.display = "none";
         },2000)
-       
+
       },
       error: function() {
-        
+
         $('#signupButton').show();
 
         // Fail message
