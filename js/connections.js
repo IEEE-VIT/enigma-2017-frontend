@@ -39,8 +39,9 @@ $(document).ready(function(){
         Cookies.set('x-access-token', message.token);
 
         //redirect to the question page on successful login
+        //For now, redirecting to Countdown page
         if(message.code == '0'){
-          window.location.replace("./r/ques.html");
+          window.location.replace("./r/countdown.html");
         }
 
         $('#success').html("<div class='alert alert-success'>");
