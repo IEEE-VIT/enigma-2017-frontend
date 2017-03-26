@@ -51,6 +51,7 @@ $(document).ready(function(){
         .append('</div>');
       },
       error: function() {
+        $('#loader_login').hide();
         $('#loginButton').show();
         // Fail message
         $('#success').html("<div class='alert alert-danger'>");
@@ -68,6 +69,7 @@ $(document).ready(function(){
     e.preventDefault();
     var name = $("input#name").val();
     var email = $("input#emailReg").val();
+    var reg_no = $("input#reg_no").val();
     var phone = $("input#contact").val();
     var pass = $("input#passwordReg").val();
     var conf_pass = $("input#conf_pass").val();
@@ -84,6 +86,7 @@ $(document).ready(function(){
       data: JSON.stringify({
         name: name,
         email: email,
+        reg_no: reg_no,
         contact: phone,
         password: pass
       }),
@@ -110,7 +113,7 @@ $(document).ready(function(){
        
       },
       error: function() {
-        
+        $('#loader_reg').hide();
         $('#signupButton').show();
 
         // Fail message
