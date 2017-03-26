@@ -53,6 +53,70 @@
 
 
   </script>
+
+  <!-- Regex -->
+  <script type="text/javascript">
+    function checkName(){
+      if($('#name').val()!==''){
+        $('#correct-name').html('<img src="img/tick.png" width="25" height="25"/>');
+      }
+      else{
+        $('#correct-name').html('<img src="img/cross.png" width="25" height="25"/>');
+      }
+    }
+      function checkEmail(){
+      var re=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(($('#emailReg').val()).match(re)){
+        $('#correct-emailReg').html('<img src="img/tick.png" width="25" height="25"/>');
+      }
+      else{
+        $('#correct-emailReg').html('<img src="img/cross.png" width="25" height="25"/>');
+      }
+    }
+    function checkReg(){
+      var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
+      if(($('#reg_no').val()).match(reg)){
+        $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
+      }
+      else{
+        $('#correct-reg').html('<img src="img/cross.png" width="25" height="25"/>');
+      }
+    }
+      function checkPh(){
+      var phoneno=/^\d{10}$/;
+      if(($('#contact').val()).match(phoneno)){
+        $('#correct-contact').html('<img src="img/tick.png" width="25" height="25"/>');
+            }
+    else{
+        $('#correct-contact').html('<img src="img/cross.png" width="25" height="25"/>');
+        }
+      }
+function confirmPass(){
+        if((($('#passwordReg').val())!=($('#conf_pass').val()))){
+          document.getElementById('conf_pass').style.color="red";
+          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
+        }
+        else
+        {
+          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
+          $('#correct-conf_pass').html('<img src="img/tick.png" width="25" height="25"/>');
+        }
+      }
+    function checkPassword(){
+        if((($('#conf_pass').val())=='')){
+          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
+        }
+        pass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+        if(!($('#passwordReg').val()).match(pass))
+          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
+        if(($('#passwordReg').val())==''){
+          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
+        }
+        else
+          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
+    }
+
+  </script>
 </head>
 
 <body id="page-top" style="overflow: visible;">
@@ -109,44 +173,83 @@
           <div class="section-title center">
             <div class="col-md-8 col-md-offset-2">
               <form name="register_form" id="registerForm" method="post">
-                <div class="row">
+                <div class="row" style="margin-left: 2%;">
 
-                  <div class="form-group">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" required="required">
-                    <p class="help-block text-danger"></p>
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-field">
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Name" size="30" onkeyup="checkName()" required="required">
+                    </div>
+                    <div class="image-container">
+                      <span id="correct-name" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <input type="text" id="emailReg" name="email" class="form-control" placeholder="Email" required="required">
-                    <p class="help-block text-danger"></p>
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      <input type="text" id="emailReg" name="email" class="form-control" placeholder="Email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email Id')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="checkEmail()" required="required"></div>
+                    <div class="image-container">
+                      <span id="correct-emailReg" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span></div>
+                    
                   </div>
 
-                  <div class="form-group">
-                    <input type="text" id="contact" name="contact" class="form-control" placeholder="Phone no." required="required">
-                    <p class="help-block text-danger"></p>
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      <input type="text" id="reg_no" name="reg_no" class="form-control" placeholder="VIT Registeration number" size="30" onkeyup="checkReg()" required="required">
+                    </div>
+                    <div class="image-container">
+                      <span id="correct-reg" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <input type="password" id="passwordReg" name="password" class="form-control" placeholder="Enter new Password" required="required">
-                    <p class="help-block text-danger"></p>
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      <input type="text" id="contact" name="contact" class="form-control" placeholder="Phone no." size="30" onkeyup="checkPh()" required="required"></div>
+                    <div class="image-container">
+                      <span id="correct-contact" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <input type="password" id="conf_pass" class="form-control" placeholder="Confirm Password" required="required">
-                    <p class="help-block text-danger"></p>
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      <input type="password" id="passwordReg" name="password" class="form-control" placeholder="Enter new Password" size="30" onkeyup="checkPassword()" required="required"></div>
+                      <div class="image-container">
+                        <span id="correct-passwordReg" style="float: right;">
+                          <img src="img/blank.png" width="25" height="25">
+                        </span>
+                      </div>
+                  </div>
+
+                  <div class="form-group" style="display: flex;" >
+                    <div class="input-container">
+                      <input type="password" id="conf_pass" class="form-control" placeholder="Confirm Password" size="30" onkeyup="confirmPass()" required="required"></div>
+                    <div class="image-container">
+                        <span id="correct-conf_pass" style="float: right;">
+                          <img src="img/blank.png" width="25" height="25">
+                        </span>
+                    </div>
                   </div>
 
                 </div>
                 <div id="loader_reg"  style="display: none;"><img src="img/default.gif"></div>
                 <div id="success"></div>
 
-                <button id="signupButton" type="submit" class="btn btn-default">Register</button>
+                <button id="signupButton" type="submit" class="btn btn-default" onclick="check()" >Submit</button>
               </form>
             </div>
           </div>
+        </div>        
         </div>
       </div>
     </div>
+  </div>
 
 
     <div id="" class="container" style="height: 620px;">
