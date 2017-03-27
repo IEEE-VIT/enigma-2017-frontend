@@ -4,7 +4,7 @@ $(document).ready(function(){
   $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 
   if(Cookies.get('x-access-token')){
-    window.location.replace("./r/ques.html");
+    window.location.replace("./r/countdown.html");
   }
 
 
