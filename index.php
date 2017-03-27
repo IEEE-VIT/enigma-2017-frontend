@@ -139,9 +139,9 @@ function confirmPass(){
 
           <div class="section-title center">
             <div class="col-md-8 col-md-offset-2" style="margin-left: 16.677%; width: 66.66666667%";>
+              <div id="login_error" style="margin-bottom: 16.677%"></div>
               <form name="login_form" id="loginForm" enctype="application/json" method="post">
                 <div class="row">
-
                   <div class="form-group">
                     <input type="text" id="email" name="email" class="form-control" placeholder="Email" required="required">
                     <p class="help-block text-danger"></p>

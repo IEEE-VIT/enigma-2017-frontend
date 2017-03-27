@@ -3,11 +3,9 @@ $(document).ready(function(){
   $("question_id").html("Testing");
   $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 
-  if(Cookies.get('x-access-token')){
-    window.location.replace("./r/countdown.html");
-  }
-
-
+  // if(Cookies.get('x-access-token')){
+  //   window.location.replace("./r/countdown.html");
+  // }
 
   $("#loginForm").submit(function(e) {
     e.preventDefault();
@@ -44,7 +42,6 @@ $(document).ready(function(){
         if(message.code == '0'){
           window.location.replace("./r/countdown.html");
         }
-
         $('#success_login').html("<div class='alert alert-success'>");
         $('#success_login > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
@@ -52,6 +49,7 @@ $(document).ready(function(){
         .append("<strong style='font-size: 14px;'>" + message.message + "</strong>");
         $('#success_login > .alert-success')
         .append('</div>');
+
       },
       error: function() {
         $('#loader_login').hide();

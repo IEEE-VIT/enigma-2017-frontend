@@ -13,6 +13,7 @@ $(document).ready(function(){
       },
       success: function(message, textStatus, request) {
         $('#question_id').html(message.question);
+        $('#score_id').html(message.score);
         num = message.num;
       }
     }
