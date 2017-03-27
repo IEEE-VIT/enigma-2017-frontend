@@ -3,9 +3,9 @@ $(document).ready(function(){
   $("question_id").html("Testing");
   $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 
-  if(Cookies.get('x-access-token')){
-    window.location.replace("./r/countdown.html");
-  }
+  // if(Cookies.get('x-access-token')){
+  //   window.location.replace("./r/countdown.html");
+  // }
 
   $("#loginForm").submit(function(e) {
     e.preventDefault();
