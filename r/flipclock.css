@@ -377,7 +377,7 @@
 #countdd {
   margin-top: -10px; 
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 20%;
 }
 
 @-webkit-keyframes show {

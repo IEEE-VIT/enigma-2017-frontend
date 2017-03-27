@@ -22,7 +22,6 @@
   $(document).ready(function() {
 
     console.log($('#registerForm'));
-
     // Get the modal
     var modal = document.getElementById('myModal');
 
@@ -68,9 +67,11 @@
       var re=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if(($('#emailReg').val()).match(re)){
         $('#correct-emailReg').html('<img src="img/tick.png" width="25" height="25"/>');
+        
       }
       else{
         $('#correct-emailReg').html('<img src="img/cross.png" width="25" height="25"/>');
+        
       }
     }
     function checkReg(){
@@ -83,6 +84,7 @@
       }
     }
       function checkPh(){
+      checkReg();
       var phoneno=/^\d{10}$/;
       if(($('#contact').val()).match(phoneno)){
         $('#correct-contact').html('<img src="img/tick.png" width="25" height="25"/>');
@@ -98,6 +100,7 @@ function confirmPass(){
         }
         else
         {
+          document.getElementById('conf_pass').style.color="green";
           $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
           $('#correct-conf_pass').html('<img src="img/tick.png" width="25" height="25"/>');
         }
@@ -139,7 +142,7 @@ function confirmPass(){
 
           <div class="section-title center">
             <div class="col-md-8 col-md-offset-2" style="margin-left: 16.677%; width: 66.66666667%";>
-              <div id="login_error" style="margin-bottom: 16.677%"></div>
+              
               <form name="login_form" id="loginForm" enctype="application/json" method="post">
                 <div class="row">
                   <div class="form-group">
@@ -240,6 +243,11 @@ function confirmPass(){
 
                 </div>
                 <div id="loader_reg"  style="display: none;"><img src="img/default.gif"></div>
+                <script type="text/javascript">
+                  function btn_reapp(){
+                    $('#signupButton').show();
+                  }
+                </script>
                 <div id="success"></div>
 
                 <button id="signupButton" type="submit" class="btn btn-default" onclick="check()" >Submit</button>
@@ -435,7 +443,7 @@ function confirmPass(){
           <div class="rules-text" >
 
             <ol style="color: white; list-style: decimal; list-style-position: inside; text-align: center;">
-              <li >The event shall be held over _ days, from _ to _</li><br>
+              <li >The event shall be held over 2 days, from 9<sup>th</sup> to 11<sup>th</sup> April</li><br>
               <li>Participation is open to students of VIT University. Each participant represents himself/herself only.</li><br>
               <li>The participants' aim is to crack the levels as quickly as they can so as to place themselves at the top of the leaderboard.</li><br>
               <li>The event entails an Online Cryptic Hunt in which participants must make their way through a series of levels filled with cryptic questions.</li><br>

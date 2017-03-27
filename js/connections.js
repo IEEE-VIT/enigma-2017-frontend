@@ -104,12 +104,13 @@ $(document).ready(function(){
         // Success message
         $("#loader_reg").hide();
         $('#success').html("<div class='alert alert-success'>");
-        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' onclick='btn_reapp()' aria-hidden='true'>&times;")
         .append("</button>");
         $('#success > .alert-success')
         .append("<strong style='font-size: 14px;'>" + message.message + "</strong>");
         $('#success > .alert-success')
         .append('</div>');
+        $('#registerForm').trigger("reset");
         setTimeout(function(){
            document.getElementById("myModal").style.display = "none";
         },2000)
@@ -126,7 +127,7 @@ $(document).ready(function(){
         $('#success > .alert-danger').append("<strong style='font-size: 14px;'>Oops! Something went wrong!</strong>");
         $('#success > .alert-danger').append('</div>');
         //clear all fields
-        $('#contactForm').trigger("reset");
+        
       },
     });
   });
