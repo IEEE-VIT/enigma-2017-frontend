@@ -4,7 +4,7 @@ $(document).ready(function(){
   $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 
   if(Cookies.get('x-access-token')){
-    window.location.replace("./r/ques.html");
+    window.location.replace("./r/countdown.html");
   }
 
 
@@ -39,8 +39,9 @@ $(document).ready(function(){
         Cookies.set('x-access-token', message.token);
 
         //redirect to the question page on successful login
+        //For now, redirecting to Countdown page
         if(message.code == '0'){
-          window.location.replace("./r/ques.html");
+          window.location.replace("./r/countdown.html");
         }
 
         $('#success').html("<div class='alert alert-success'>");
@@ -52,6 +53,7 @@ $(document).ready(function(){
         .append('</div>');
       },
       error: function() {
+        $('#loader_login').hide();
         $('#loginButton').show();
         // Fail message
         $('#success').html("<div class='alert alert-danger'>");
@@ -69,6 +71,7 @@ $(document).ready(function(){
     e.preventDefault();
     var name = $("input#name").val();
     var email = $("input#emailReg").val();
+    var reg_no = $("input#reg_no").val();
     var phone = $("input#contact").val();
     var pass = $("input#passwordReg").val();
     var reg = $("input#registration").val();
@@ -86,6 +89,7 @@ $(document).ready(function(){
       data: JSON.stringify({
         name: name,
         email: email,
+        reg_no: reg_no,
         contact: phone,
         password: pass,
         registration_id: reg
@@ -113,7 +117,7 @@ $(document).ready(function(){
 
       },
       error: function() {
-
+        $('#loader_reg').hide();
         $('#signupButton').show();
 
         // Fail message
