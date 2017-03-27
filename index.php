@@ -75,7 +75,7 @@
     }
     function checkReg(){
       var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
-      if(($('#reg_no').val()).match(reg)){
+      if(($('#registration').val()).match(reg)){
         $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
       }
       else{
@@ -247,12 +247,9 @@ function confirmPass(){
           </div>
         </div>
         </div>
-      </div>
-    </div>
-  </div>
+        </div>
 
-
-    <div id="" class="container" style="height: 620px;">
+      <div id="" class="container" style="height: 620px;">
       <div class="section-title text-center center">
 
       </div>
@@ -390,7 +387,9 @@ function confirmPass(){
           <div class="col-md-8 col-md-offset-2">
             <div class="about-text">
             </div>
-            <p class="scrollto--arrow"><a href="#about" class="page-scroll"><img src="img/down.png" alt="scroll down arrow" style="margin-top: 220px"></a></p>
+            <p class="scrollto--arrow">
+              <a href="#about" class="page-scroll"><img src="img/down.png" alt="scroll down arrow" style="margin-top: 220px"></a>
+            </p>
           </div>
         </div>
       </div>

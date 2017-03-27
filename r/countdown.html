@@ -16,12 +16,20 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
   <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-  <script
-  src="https://code.jquery.com/jquery-2.2.0.js"
-  integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE="
-  crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="js/jquery.countdown.js"></script>
+  <link rel="stylesheet" type="text/css" href="flipclock.css">
+  
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/flipclock.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="js/jquery.counterup.js"></script>
+  <script type="text/javascript" src="js/waypoints.js"></script>
+  <script type="text/javascript" src="js/connections.js"></script>
+  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/js.cookie.js"></script>
 
   <script type="text/javascript">
   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
@@ -72,32 +80,49 @@
         <span style="font-size:30px;cursor:pointer; position: absolute; left: 40px; top: 50px;" onclick="openNav()">&#9776;</span>
 
         <div style="width: 80%; margin-left: auto; margin-right: auto;" id="ques">
-          <h2 style="margin-top: -10px; margin-right: auto;margin-left: auto;"" id="question_id">CountDown</h2>
-          <h2 id="getting-started"></h2>
+          <h2 id="countdd" class="clock"></h2>
+          <h2 id="getting-started" ></h2>
             <script type="text/javascript">
-              $("#getting-started")
-              .countdown("2017/04/09", function(event) {
-                $(this).text(
-                  event.strftime('%D days %H:%M:%S')
-                );
+              var clock;
+              
+              $(document).ready(function() {
+                // Set dates.
+                var futureDate  = new Date("April 9, 2017 09:00 PM EDT");
+                var currentDate = new Date();
+
+                // Calculate the difference in seconds between the future and current date
+                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+                // Calculate day difference and apply class to .clock for extra digit styling.
+                function dayDiff(first, second) {
+                  return (second-first)/(1000*60*60*24);
+                }
+
+                if (dayDiff(currentDate, futureDate) < 100) {
+                  $('.clock').addClass('twoDayDigits');
+                } else {
+                  $('.clock').addClass('threeDayDigits');
+                }
+
+                if(diff < 0) {
+                  diff = 0;
+                }
+
+                // Instantiate a coutdown FlipClock
+                clock = $('.clock').FlipClock(diff, {
+                  clockFace: 'DailyCounter',
+                  countdown: true
+                });
+                $(".flip-clock-label").hide();
               });
             </script>
-          
+                  
         </div>
 
        </div>
     </main>
   </div>
 
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/SmoothScroll.js"></script>
-  <script type="text/javascript" src="js/jquery.counterup.js"></script>
-  <script type="text/javascript" src="js/waypoints.js"></script>
-  <script type="text/javascript" src="js/connections.js"></script>
-  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/js.cookie.js"></script>
+
 </body>
 </html>
