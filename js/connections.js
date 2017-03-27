@@ -34,6 +34,7 @@ $(document).ready(function(){
 
         //Loader
         $('#loader_login').hide();
+        $('#loginButton').show();
 
         //sets session cookie. TODO: Check domain and timeout problems
         Cookies.set('x-access-token', message.token);
@@ -44,23 +45,23 @@ $(document).ready(function(){
           window.location.replace("./r/countdown.html");
         }
 
-        $('#success').html("<div class='alert alert-success'>");
-        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        $('#success_login').html("<div class='alert alert-success'>");
+        $('#success_login > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
-        $('#success > .alert-success')
-        .append("<strong>" + message.message + "</strong>");
-        $('#success > .alert-success')
+        $('#success_login > .alert-success')
+        .append("<strong style='font-size: 14px;'>" + message.message + "</strong>");
+        $('#success_login > .alert-success')
         .append('</div>');
       },
       error: function() {
         $('#loader_login').hide();
         $('#loginButton').show();
         // Fail message
-        $('#success').html("<div class='alert alert-danger'>");
-        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        $('#success_login').html("<div class='alert alert-danger'>");
+        $('#success_login > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
-        $('#success > .alert-danger').append("<strong>Oops! Something went wrong!</strong>");
-        $('#success > .alert-danger').append('</div>');
+        $('#success_login > .alert-danger').append("<strong>Oops! Something went wrong!</strong>");
+        $('#success_login > .alert-danger').append('</div>');
         //clear all fields
         $('#contactForm').trigger("reset");
       },
@@ -108,7 +109,7 @@ $(document).ready(function(){
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
         $('#success > .alert-success')
-        .append("<strong>" + message.message + "</strong>");
+        .append("<strong style='font-size: 14px;'>" + message.message + "</strong>");
         $('#success > .alert-success')
         .append('</div>');
         setTimeout(function(){
@@ -124,7 +125,7 @@ $(document).ready(function(){
         $('#success').html("<div class='alert alert-danger'>");
         $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
-        $('#success > .alert-danger').append("<strong>Oops! Something went wrong!</strong>");
+        $('#success > .alert-danger').append("<strong style='font-size: 14px;'>Oops! Something went wrong!</strong>");
         $('#success > .alert-danger').append('</div>');
         //clear all fields
         $('#contactForm').trigger("reset");

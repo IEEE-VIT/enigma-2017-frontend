@@ -350,6 +350,9 @@ hr {
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
+#enig_arrow {
+	margin-top: 200px;
+}
 /* rules Section */
 #rules {
 	padding: 50px 0 0;
@@ -651,6 +654,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 @media(min-width:991px) {
 #contact_btn {
 	margin-bottom: 30px;
+}
+#enig_arrow {
+	margin-top: 220px;
 }
 @media(min-width:0px) {
 .intro {

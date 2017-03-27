@@ -154,6 +154,7 @@ function confirmPass(){
 
                 </div>
                 <div id="loader_login" style="display: none;"><img src="img/login.gif"></div>
+                <div id="success_login"></div>
                 <button id="loginButton" type="submit" class="dark_btn btn btn-default">Login</button>
               </form>
             </div>
@@ -388,7 +389,7 @@ function confirmPass(){
             <div class="about-text">
             </div>
             <p class="scrollto--arrow">
-              <a href="#about" class="page-scroll"><img src="img/down.png" alt="scroll down arrow" style="margin-top: 220px"></a>
+              <a href="#about" class="page-scroll"><img src="img/down.png" alt="scroll down arrow" id="enig_arrow"></a>
             </p>
           </div>
         </div>
