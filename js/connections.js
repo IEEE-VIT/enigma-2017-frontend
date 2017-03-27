@@ -7,8 +7,6 @@ $(document).ready(function(){
     window.location.replace("./r/countdown.html");
   }
 
-
-
   $("#loginForm").submit(function(e) {
     e.preventDefault();
     var email = $("input#email").val();
@@ -43,14 +41,11 @@ $(document).ready(function(){
         if(message.code == '0'){
           window.location.replace("./r/countdown.html");
         }
-
-        $('#success').html("<div class='alert alert-success'>");
-        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-        .append("</button>");
-        $('#success > .alert-success')
-        .append("<strong>" + message.message + "</strong>");
-        $('#success > .alert-success')
-        .append('</div>');
+        else{
+          $('#loginButton').show();
+          $('#login_error').empty();
+          $('#login_error').append(message.message);
+        }
       },
       error: function() {
         $('#loader_login').hide();
