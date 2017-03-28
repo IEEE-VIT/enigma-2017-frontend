@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
   <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="js/regex.js"></script>
 
   <!-- Stylesheet
   ================================================== -->
@@ -53,87 +54,7 @@
 
   </script>
 
-  <!-- Regex -->
-  <script type="text/javascript">
-    function checkName(){
-      if($('#name').val()!==''){
-        $('#correct-name').html('<img src="img/tick.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = false; 
-      }
-      else{
-        $('#correct-name').html('<img src="img/cross.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = true; 
-      }
-    }
-      function checkEmail(){
-      var re=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(($('#emailReg').val()).match(re)){
-        $('#correct-emailReg').html('<img src="img/tick.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = false; 
-        
-      }
-      else{
-        $('#correct-emailReg').html('<img src="img/cross.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = true; 
-        
-      }
-    }
-    function checkReg(){
-      var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
-      if(($('#registration').val()).match(reg)){
-        $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = false; 
-      }
-      else{
-        $('#correct-reg').html('<img src="img/cross.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = true; 
-      }
-    }
-      function checkPh(){
-      checkReg();
-      var phoneno=/^\d{10}$/;
-      if(($('#contact').val()).match(phoneno)){
-        $('#correct-contact').html('<img src="img/tick.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = false; 
-            }
-    else{
-        $('#correct-contact').html('<img src="img/cross.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = true; 
-        }
-      }
-function confirmPass(){
-        if((($('#passwordReg').val())!=($('#conf_pass').val()))){
-          document.getElementById('conf_pass').style.color="red";
-          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
-          document.getElementById("signupButton").disabled = true; 
-        }
-        else
-        {
-          document.getElementById('conf_pass').style.color="green";
-          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
-          $('#correct-conf_pass').html('<img src="img/tick.png" width="25" height="25"/>');
-          document.getElementById("signupButton").disabled = false; 
-        }
-      }
-    function checkPassword(){
-        if((($('#conf_pass').val())=='')){
-          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
-          document.getElementById("signupButton").disabled = true; 
-        }
-        pass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
-        if(!($('#passwordReg').val()).match(pass))
-          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = true; 
-        if(($('#passwordReg').val())==''){
-          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
-          document.getElementById("signupButton").disabled = true; 
-        }
-        else
-          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
-        document.getElementById("signupButton").disabled = false; 
-    }
 
-  </script>
 </head>
 
 <body id="page-top" style="overflow: visible;">
