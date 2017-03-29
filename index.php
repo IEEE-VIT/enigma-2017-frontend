@@ -134,6 +134,21 @@
                       </span></div>
 
                   </div>
+                  <!-- TODO : Are you a VIT Student checkbox
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      Are you a VIT Student?
+                      <input type="checkbox" id="vit_auth" name="vit_auth" class="form-control" placeholder="Hello" size="30">
+                    </div>
+                    <div class="image-container">
+
+                      <span id="correct-emailReg" style="float: right;">
+
+                        <img src="img/blank.png" width="25" height="25">
+                      </span></div>
+
+                  </div>      
+                  -->            
 
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
