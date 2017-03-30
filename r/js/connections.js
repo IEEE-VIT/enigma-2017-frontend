@@ -12,7 +12,7 @@ $(document).ready(function(){
         "x-access-token":x_access_token
       },
       success: function(message, textStatus, request) {
-        $('#question_id').html(message.question);
+        $('#ques').html("<h2 style=\"margin-top: -10px; margin-right: auto;margin-left: auto;\" id=\"question_id\">" + message.question + "</h2><img id=\"image_id\" src=\"" + message.image_url + "\" style=\"width: 20%; margin-right: auto;margin-left: auto; margin-top: 60px;\"/>");
         $('#score_id').html(message.score);
         num = message.num;
       }
