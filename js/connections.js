@@ -111,10 +111,16 @@ $(document).ready(function(){
         $('#success > .alert-success')
         .append('</div>');
         $('#registerForm').trigger("reset");
+
         setTimeout(function(){
            document.getElementById("myModal").style.display = "none";
-        },2000)
+           $('#success').hide();
+           $('#signupButton').show();
+        },2000);
 
+        $('.refresh_image').html('<img src="img/blank.png" width="25" height="25"/>');
+        $('#registerForm').trigger("reset");
+      
       },
       error: function() {
         $('#loader_reg').hide();

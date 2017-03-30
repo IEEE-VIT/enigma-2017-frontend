@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
   <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="js/regex.js"></script>
 
   <!-- Stylesheet
   ================================================== -->
@@ -46,6 +47,7 @@
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
+      refresh();
     }
 
   });
@@ -53,73 +55,7 @@
 
   </script>
 
-  <!-- Regex -->
-  <script type="text/javascript">
-    function checkName(){
-      if($('#name').val()!==''){
-        $('#correct-name').html('<img src="img/tick.png" width="25" height="25"/>');
-      }
-      else{
-        $('#correct-name').html('<img src="img/cross.png" width="25" height="25"/>');
-      }
-    }
-      function checkEmail(){
-      var re=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(($('#emailReg').val()).match(re)){
-        $('#correct-emailReg').html('<img src="img/tick.png" width="25" height="25"/>');
-        
-      }
-      else{
-        $('#correct-emailReg').html('<img src="img/cross.png" width="25" height="25"/>');
-        
-      }
-    }
-    function checkReg(){
-      var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
-      if(($('#registration').val()).match(reg)){
-        $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
-      }
-      else{
-        $('#correct-reg').html('<img src="img/cross.png" width="25" height="25"/>');
-      }
-    }
-      function checkPh(){
-      checkReg();
-      var phoneno=/^\d{10}$/;
-      if(($('#contact').val()).match(phoneno)){
-        $('#correct-contact').html('<img src="img/tick.png" width="25" height="25"/>');
-            }
-    else{
-        $('#correct-contact').html('<img src="img/cross.png" width="25" height="25"/>');
-        }
-      }
-function confirmPass(){
-        if((($('#passwordReg').val())!=($('#conf_pass').val()))){
-          document.getElementById('conf_pass').style.color="red";
-          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
-        }
-        else
-        {
-          document.getElementById('conf_pass').style.color="green";
-          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
-          $('#correct-conf_pass').html('<img src="img/tick.png" width="25" height="25"/>');
-        }
-      }
-    function checkPassword(){
-        if((($('#conf_pass').val())=='')){
-          $('#correct-conf_pass').html('<img src="img/cross.png" width="25" height="25"/>');
-        }
-        pass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
-        if(!($('#passwordReg').val()).match(pass))
-          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
-        if(($('#passwordReg').val())==''){
-          $('#correct-passwordReg').html('<img src="img/cross.png" width="25" height="25"/>');
-        }
-        else
-          $('#correct-passwordReg').html('<img src="img/tick.png" width="25" height="25"/>');
-    }
 
-  </script>
 </head>
 
 <body id="page-top" style="overflow: visible;">
@@ -184,7 +120,7 @@ function confirmPass(){
                       <input type="text" id="name" name="name" class="form-control" placeholder="Name" size="30" onkeyup="checkName()" required="required">
                     </div>
                     <div class="image-container">
-                      <span id="correct-name" style="float: right;">
+                      <span id="correct-name" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -194,18 +130,33 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="text" id="emailReg" name="email" class="form-control" placeholder="Email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email Id')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="checkEmail()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-emailReg" style="float: right;">
+                      <span id="correct-emailReg" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span></div>
 
                   </div>
+                  <!-- TODO : Are you a VIT Student checkbox
+                  <div class="form-group" style="display: flex;">
+                    <div class="input-container">
+                      Are you a VIT Student?
+                      <input type="checkbox" id="vit_auth" name="vit_auth" class="form-control" placeholder="Hello" size="30">
+                    </div>
+                    <div class="image-container">
+
+                      <span id="correct-emailReg" style="float: right;">
+
+                        <img src="img/blank.png" width="25" height="25">
+                      </span></div>
+
+                  </div>      
+                  -->            
 
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
                       <input type="text" id="registration" name="reg_no" class="form-control" placeholder="Registration number" size="30" onkeyup="checkReg()" required="required">
                     </div>
                     <div class="image-container">
-                      <span id="correct-reg" style="float: right;">
+                      <span id="correct-reg" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -215,7 +166,7 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="text" id="contact" name="contact" class="form-control" placeholder="Phone no." size="30" onkeyup="checkPh()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-contact" style="float: right;">
+                      <span id="correct-contact" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -225,7 +176,7 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="password" id="passwordReg" name="password" class="form-control" placeholder="Enter new Password" size="30" onkeyup="checkPassword()" required="required"></div>
                       <div class="image-container">
-                        <span id="correct-passwordReg" style="float: right;">
+                        <span id="correct-passwordReg" class="refresh_image" style="float: right;">
                           <img src="img/blank.png" width="25" height="25">
                         </span>
                       </div>
@@ -235,7 +186,7 @@ function confirmPass(){
                     <div class="input-container">
                       <input type="password" id="conf_pass" class="form-control" placeholder="Confirm Password" size="30" onkeyup="confirmPass()" required="required"></div>
                     <div class="image-container">
-                        <span id="correct-conf_pass" style="float: right;">
+                        <span id="correct-conf_pass" class="refresh_image" style="float: right;">
                           <img src="img/blank.png" width="25" height="25">
                         </span>
                     </div>
@@ -247,10 +198,14 @@ function confirmPass(){
                   function btn_reapp(){
                     $('#signupButton').show();
                   }
+                  function btn_refresh() {
+                    $('#success').hide();
+                    $('#signupButton').show();
+                  }
                 </script>
                 <div id="success"></div>
 
-                <button id="signupButton" type="submit" class="btn btn-default" onclick="check()" >Submit</button>
+                <button id="signupButton" type="submit" class="btn btn-default" >Submit</button>
               </form>
             </div>
           </div>
