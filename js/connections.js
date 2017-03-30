@@ -111,9 +111,12 @@ $(document).ready(function(){
         $('#success > .alert-success')
         .append('</div>');
         $('#registerForm').trigger("reset");
+
         setTimeout(function(){
            document.getElementById("myModal").style.display = "none";
-        },2000)
+        },2000);
+
+        refresh();
 
       },
       error: function() {

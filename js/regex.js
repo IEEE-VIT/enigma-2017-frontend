@@ -96,3 +96,10 @@ function checkPassword(){
     document.getElementById("signupButton").disabled = false;
   } 
 }
+
+function refresh(){
+  $('.refresh_image').html('<img src="img/blank.png" width="25" height="25"/>');
+  $('#registerForm').trigger("reset");
+  console.log("Test1");
+  btn_reapp();
+}

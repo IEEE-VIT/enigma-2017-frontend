@@ -47,6 +47,7 @@
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
+      refresh();
     }
 
   });
@@ -119,7 +120,7 @@
                       <input type="text" id="name" name="name" class="form-control" placeholder="Name" size="30" onkeyup="checkName()" required="required">
                     </div>
                     <div class="image-container">
-                      <span id="correct-name" style="float: right;">
+                      <span id="correct-name" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -129,7 +130,7 @@
                     <div class="input-container">
                       <input type="text" id="emailReg" name="email" class="form-control" placeholder="Email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email Id')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="checkEmail()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-emailReg" style="float: right;">
+                      <span id="correct-emailReg" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span></div>
 
@@ -155,7 +156,7 @@
                       <input type="text" id="registration" name="reg_no" class="form-control" placeholder="Registration number" size="30" onkeyup="checkReg()" required="required">
                     </div>
                     <div class="image-container">
-                      <span id="correct-reg" style="float: right;">
+                      <span id="correct-reg" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -165,7 +166,7 @@
                     <div class="input-container">
                       <input type="text" id="contact" name="contact" class="form-control" placeholder="Phone no." size="30" onkeyup="checkPh()" required="required"></div>
                     <div class="image-container">
-                      <span id="correct-contact" style="float: right;">
+                      <span id="correct-contact" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>
@@ -175,7 +176,7 @@
                     <div class="input-container">
                       <input type="password" id="passwordReg" name="password" class="form-control" placeholder="Enter new Password" size="30" onkeyup="checkPassword()" required="required"></div>
                       <div class="image-container">
-                        <span id="correct-passwordReg" style="float: right;">
+                        <span id="correct-passwordReg" class="refresh_image" style="float: right;">
                           <img src="img/blank.png" width="25" height="25">
                         </span>
                       </div>
@@ -185,7 +186,7 @@
                     <div class="input-container">
                       <input type="password" id="conf_pass" class="form-control" placeholder="Confirm Password" size="30" onkeyup="confirmPass()" required="required"></div>
                     <div class="image-container">
-                        <span id="correct-conf_pass" style="float: right;">
+                        <span id="correct-conf_pass" class="refresh_image" style="float: right;">
                           <img src="img/blank.png" width="25" height="25">
                         </span>
                     </div>
