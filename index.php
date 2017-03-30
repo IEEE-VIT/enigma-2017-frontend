@@ -198,6 +198,10 @@
                   function btn_reapp(){
                     $('#signupButton').show();
                   }
+                  function btn_refresh() {
+                    $('#success').hide();
+                    $('#signupButton').show();
+                  }
                 </script>
                 <div id="success"></div>
 

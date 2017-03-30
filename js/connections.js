@@ -114,10 +114,13 @@ $(document).ready(function(){
 
         setTimeout(function(){
            document.getElementById("myModal").style.display = "none";
+           $('#success').hide();
+           $('#signupButton').show();
         },2000);
 
-        refresh();
-
+        $('.refresh_image').html('<img src="img/blank.png" width="25" height="25"/>');
+        $('#registerForm').trigger("reset");
+      
       },
       error: function() {
         $('#loader_reg').hide();
