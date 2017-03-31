@@ -53,7 +53,7 @@
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" style="width: 100%; margin-left: 0px;">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Enigma 2017</span>
           <div class="mdl-layout-spacer"></div>
@@ -76,29 +76,17 @@
           </ul>
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
-            <div class="mdl-layout-spacer"></div>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="bans.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Bans</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
+   
+      <main class="mdl-layout__content mdl-color--grey-100" style="margin-left: 0px;">
+        <div class="mdl-grid demo-content" style="max-width: 100%;">
          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-grid">
-           <h3 style="margin-left: auto; margin-right: auto; text-align: center;">Latest question Solved: <span id="latest_ques"></span></h3>
+           <h3 style="margin-left: auto; margin-right: auto; text-align: center;">Latest question solved<br><br> <span id="latest_ques" style="font-size: 55px;">5</span></h3>
 
-           <img src="images//capture.png" style="width: 70%; margin-left: auto; margin-right: auto;">
+           
           </div>
            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-grid">
-           <h3 style="margin-left: auto; margin-right: auto;  text-align: center;" id="latest_ques">Question with most failure: Q4</h3>
-            <img src="images//capture.png" style="width: 70%; margin-left: auto; margin-right: auto;">
+           <h3 style="margin-left: auto; margin-right: auto;  text-align: center;" id="latest_ques">Question with most failure<br><br> <span id="ques_fail"  style="font-size: 55px;">7</span></h3>
+           
           </div>
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h2 style="margin-left: auto; margin-right: auto;  text-align: center;" id="attempt_no">No. of the attempts in the last hour: </h2>
