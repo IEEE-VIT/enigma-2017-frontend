@@ -12,7 +12,21 @@ $(document).ready(function(){
         "x-access-token":x_access_token
       },
       success: function(message, textStatus, request) {
-        $("#latest_ques").append(message.message[0].num);
+        $("#latest_ques").append(message.message.num);
+      }
+    }
+  );
+  $.ajax({
+      url: "https://enigma2.herokuapp.com/admin/attempts",
+      type: "GET",
+      datatype: "json",
+      contentType: "application/json; charset=utf-8",
+      cache: false,
+      headers:{
+        "x-access-token":x_access_token
+      },
+      success: function(message, textStatus, request) {
+        $("#attempts").append(message.result);
       }
     }
   );
