@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-  $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
   var x_access_token = Cookies.get('x-access-token');
 
   $.ajax({
@@ -15,8 +13,8 @@ $(document).ready(function(){
       success: function(message, textStatus, request) {
           var i = 0;
           var string = "";
-          for(i=0; i<=message.banned; i++){
-            string = string + "<tr><td>" + (i+1)  + "</td><td>" + message.result[i].email + "</td><td>" + message.result[i].score + "</td><td>" + message.result[i].num + "</td></tr>"
+          for(i=0; i<=message.banned.length-1; i++){
+            string = string + "<tr><td>" + (i+1)  + "</td><td>" + message.banned[i].email + "</td><td>" + message.banned[i].score + "</td><td>" + message.banned[i].num + "</td></tr>"
           }
           $('#table_body').append(string);
       }
