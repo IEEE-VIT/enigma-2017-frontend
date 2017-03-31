@@ -16,4 +16,18 @@ $(document).ready(function(){
       }
     }
   );
+  $.ajax({
+      url: "https://enigma2.herokuapp.com/results/profile",
+      type: "GET",
+      datatype: "json",
+      contentType: "application/json; charset=utf-8",
+      cache: false,
+      headers:{
+        "x-access-token":x_access_token
+      },
+      success: function(message, textStatus, request) {
+        $("#profile_email").append(message.result.email);
+      }
+    }
+  );
 });
