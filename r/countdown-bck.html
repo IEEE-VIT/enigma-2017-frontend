@@ -16,8 +16,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
   <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="flipclock.css">
-
+  
   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -26,7 +27,7 @@
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
   <script type="text/javascript" src="js/jquery.counterup.js"></script>
   <script type="text/javascript" src="js/waypoints.js"></script>
-  <script type="text/javascript" src="js/connections_count.js"></script>
+  <script type="text/javascript" src="js/connections.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/js.cookie.js"></script>
@@ -49,7 +50,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="material.css">
-  <link rel="stylesheet" href="styles.css">
+  
   <style>
   #view-source {
     position: fixed;
@@ -61,6 +62,59 @@
     z-index: 900;
   }
   </style>
+
+  <script type="text/javascript">
+    var clock;
+    
+    $(document).ready(function() {
+      // Set dates.
+      var futureDate  = new Date("April 9, 2017 09:00 PM EDT");
+      var currentDate = new Date();
+
+      // Calculate the difference in seconds between the future and current date
+      var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+      // Calculate day difference and apply class to .clock for extra digit styling.
+      function dayDiff(first, second) {
+        return (second-first)/(1000*60*60*24);
+      }
+
+      $('.clockn').addClass('twoDayDigits');
+      $('.clocka').addClass('twoDayDigits'); 
+      $('.clock').addClass('twoDayDigits'); 
+      $('.clock1').addClass('twoDayDigits'); 
+      $('.clock2').addClass('twoDayDigits'); 
+
+
+      if(diff < 0) {
+        diff = 0;
+      }
+
+      // Instantiate a coutdown FlipClock
+      clock = $('.clockn').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+      clock = $('.clocka').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+      clock = $('.clock').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+      clock = $('.clock1').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+      clock = $('.clock2').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+      
+      $(".flip-clock-label").hide();
+    });
+  </script>
 </head>
 <body>
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header" >
@@ -75,66 +129,23 @@
       </div>
     </div>
 
-    <main class="mdl-layout__content" id="main" style="background-color: #666;">
-      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 90vh; text-align: center; background-color:#ccc;">
+    <main class="mdl-layout__content mdl-color--grey-100" id="main" >
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 90vh; text-align: center; background-color:#7ABED3;">
+      <!-- <h2 id="countdd" class="clocka"></h2>
+          <h2 id="getting-started" ></h2>
+           <h2 id="countdd" class="clockn"></h2>
+          <h2 id="getting-started" ></h2> -->
         <span style="font-size:30px;cursor:pointer; position: absolute; left: 40px; top: 50px;" onclick="openNav()">&#9776;</span>
-
+       
         <div style="width: 80%; margin-left: auto; margin-right: auto;" id="ques">
+
+          <h2 id="countdd" class="clockn" style="opacity: 0.1"></h2>
+           w 
+        
          
-          
-          <h2 id="countdd" class="clock2"></h2>
-          <h2 id="getting-started" ></h2>
-           
-         
-
-          <h2 id="getting-started" ></h2>
-            <script type="text/javascript">
-              var clock;
-
-              $(document).ready(function() {
-                // Set dates.
-                var futureDate  = new Date("April 9, 2017 09:00 PM EDT");
-                var currentDate = new Date();
-
-                // Calculate the difference in seconds between the future and current date
-                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-                // Calculate day difference and apply class to .clock for extra digit styling.
-                function dayDiff(first, second) {
-                  return (second-first)/(1000*60*60*24);
-                }
-                $('.clock').addClass('twoDayDigits');
-                $('.clock2').addClass('twoDayDigits');
-                $('.clock3').addClass('twoDayDigits');
-                $('.clock4').addClass('twoDayDigits');
-                if(diff < 0) {
-                  diff = 0;
-                }
-
-                // Instantiate a coutdown FlipClock
-                clock = $('.clock').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                 clock = $('.clock2').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                  clock = $('.clock3').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                    clock = $('.clock4').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                $(".flip-clock-label").hide();
-              });
-            </script>
-
         </div>
-
        </div>
+
     </main>
   </div>
 
