@@ -60,7 +60,7 @@ limitations under the License
     margin-right: 40px;
     margin-bottom: 40px;
     z-index: 900;
-}
+  }
   </style>
 </head>
 <body>
@@ -78,37 +78,34 @@ limitations under the License
     </div>
 
     <main class="mdl-layout__content mdl-color--grey-100" id="main" >
-      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 90vh; text-align: center; background-color:black;">
-        <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" onclick="openNav()">&#9776;</span>
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 90vh; text-align: center; background-color:#7ABED3;">
+        <span style="font-size:30px;cursor:pointer; position: absolute; left: 40px; top: 50px;" onclick="openNav()">&#9776;</span>
 
-        <span style="font-size:x-large;position: absolute;right: 40px;top: 50px;color: white;">Score: <span id="score_id">100</span></span>
-        
-        <div style="width:50%;margin:0 auto"><img src="images/lgoo.jpg" style="max-height:200px;"></div>
+        <span style="font-size:5vh;position: absolute; right: 40px; top: 50px;">Score: <span id="score_id"></span></span>
 
         <div style="width: 80%; margin-left: auto; margin-right: auto;" id="ques">
-          <h2 style="margin-top: -10px; margin-right: auto;margin-left: auto;"" id="question_id">Question Placeholder</h2>
-          <img src="images/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 60px;">
         </div>
 
         <!-- Answer Textfield -->
         <form action="#"  style="margin-right: auto;margin-left: auto;" id="answerForm">
 
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="answer_id" style="background-color:lightslategrey;color:white;text-align:center;">
-            <label class="mdl-textfield__label" for="sample1" style="color:white;text-align:center;">Answer</label>
+            <input class="mdl-textfield__input" type="text" id="answer_id">
+            <label class="mdl-textfield__label" for="sample1">Answer</label>
           </div>
           <!-- Submit Button -->
-          <a href=""><input type="image" src="images/submit.png" alt="Submit Button" style="max-width:30px;max-height:30px;vertical-align:middle;" /></a>
-          <a href=""><input type="image" src="images/bulby.png" alt="Submit Button" style="max-width:30px;max-height:30px;vertical-align:middle;" /></a>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-left: 10px;">
+            Submit
+          </button>
           <p style="margin-top: 3%; font-size: 20px;">
-            <strong style="color:white;">...</strong>
+            <strong>...</strong>
             <img src="images/unlock.png" class="lock-img">
-            <img src="images/lock.png" class="lock-img" id="bg-lock"> 
+            <img src="images/lock.png" class="lock-img" id="bg-lock">
             <img src="images/lock.png" class="lock-img">
-            <strong style="color:white;">...</strong></p>
+            <strong>...</strong></p>
         </form>
         <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;" onclick="popup()" class="popup">
-          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;">
+          <img src="images/trophy.png" id="trophy">
           <span class="popuptext" id="mini-lead" style="z-index: 200;">A Simple Popup!</span>
 
         </span>
