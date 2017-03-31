@@ -34,7 +34,9 @@
   background-image:url(images/logo.png);
   background-position:center;
 }
-
+#footer-img {
+  visibility: hidden;
+}
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
@@ -219,6 +221,10 @@ html, body {
 
   #bg-cd {
     background-image:url(images/back_mobile.png);
+  }
+
+  #footer-img {
+    visibility: visible;
   }
 
   #countdwn {
