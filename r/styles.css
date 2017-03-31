@@ -28,6 +28,13 @@
   box-shadow: none;
 }
 
+#bg-cd {
+  height: 90vh; 
+  text-align: center;
+  background-image:url(images/logo.png);
+  background-position:center;
+}
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
@@ -75,6 +82,13 @@ html, body {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+#countdwn {
+  width: 80%; 
+  margin-left: auto; 
+  margin-right: auto;
+  /*padding-bottom:400px; */
 }
 
 /* Add animation (fade in the popup) */
@@ -200,6 +214,15 @@ html, body {
 
 @media( max-width: 950px){
   #ques {
+    margin-top: 60px;
+  }
+
+  #bg-cd {
+    background-image:url(images/back_mobile.png);
+  }
+
+  #countdwn {
+    /* padding-bottom: 200px; */
     margin-top: 60px;
   }
 
