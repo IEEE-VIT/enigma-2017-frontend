@@ -29,12 +29,14 @@
 }
 
 #bg-cd {
-  height: 90vh; 
+  height: 80vh; 
   text-align: center;
   background-image:url(images/logo.png);
   background-position:center;
 }
-
+#footer-img {
+  visibility: hidden;
+}
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
@@ -221,9 +223,18 @@ html, body {
     background-image:url(images/back_mobile.png);
   }
 
+  #footer-img {
+    visibility: visible;
+    margin-top: -20px;
+  }
+
   #countdwn {
     /* padding-bottom: 200px; */
     margin-top: 60px;
+  }
+
+  #countdd {
+    margin-top: -30px;
   }
 
   #lead {
