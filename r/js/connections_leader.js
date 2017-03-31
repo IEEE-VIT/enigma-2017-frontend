@@ -3,7 +3,7 @@ $(document).ready(function(){
   var x_access_token = Cookies.get('x-access-token');
   var num;
   $.ajax({
-      url: "https://enigma2.herokuapp.com/results",
+      url: "https://enigma2.herokuapp.com/results/all",
       type: "GET",
       datatype: "json",
       contentType: "application/json; charset=utf-8",

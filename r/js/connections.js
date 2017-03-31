@@ -30,6 +30,10 @@ $(document).ready(function(){
     window.location.replace("../index.php");
   });
 
+  $('#leader_butt a').click(function(e) {
+    window.location.replace("./leaderboard.html");
+  });
+
   $("#answerForm").submit(function(e) {
     e.preventDefault();
     var answer = $("input#answer_id").val();
