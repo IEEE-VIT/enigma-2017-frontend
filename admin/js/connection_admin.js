@@ -36,6 +36,20 @@ $(document).ready(function(){
     }
   );
   $.ajax({
+      url: "https://enigma2.herokuapp.com/admin/failure",
+      type: "GET",
+      datatype: "json",
+      contentType: "application/json; charset=utf-8",
+      cache: false,
+      headers:{
+        "x-access-token":x_access_token
+      },
+      success: function(message, textStatus, request) {
+        $("#ques_fail").append(message.result);
+      }
+    }
+  );
+  $.ajax({
       url: "https://enigma2.herokuapp.com/admin/attempts",
       type: "GET",
       datatype: "json",
