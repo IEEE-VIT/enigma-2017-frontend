@@ -16,7 +16,7 @@ $(document).ready(function(){
         var i = 0;
         var string = "";
         for(i=0; i<=message.result.length-1; i++){
-          string = string + "<tr><td>N</td><td>"+message.result[i].name+"</td><td>" + message.result[i].score + "</td><td>" + message.result[i].num + "</td></tr>"
+          string = string + "<tr><td>" + (i+1)  + "</td><td>" + message.result[i].name + "</td><td>" + message.result[i].score + "</td><td>" + message.result[i].num + "</td></tr>"
         }
         $('#table_body').append(string);
       }
