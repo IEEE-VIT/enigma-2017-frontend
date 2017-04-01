@@ -1,0 +1,42 @@
+#bg-ques-vid {
+	height: 90vh;
+	text-align: center;
+	background-image: url('images/video-ques.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: overlay;
+}
+
+#head-logo {
+	width:50%;
+	margin:0 auto;
+}
+
+#ques {
+	width: 72.5%; 
+	margin-left: auto; 
+	margin-right: auto;
+	align-content:center;
+}
+
+@media (max-width: 950px) {
+	#head-logo {
+		width: inherit;
+		margin-top: 20px;
+	}
+
+	#ques {
+	     /*margin-top: 60px;*/
+	     width: inherit;
+    }
+
+
+    /*#trophy {
+	    width: 60%;
+	    height: 60%;
+	}*/
+
+	#ans-input {
+		width: 90%
+	}
+}

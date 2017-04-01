@@ -215,10 +215,6 @@ html, body {
 
 
 @media( max-width: 950px){
-  #ques {
-    margin-top: 60px;
-  }
-
   #bg-cd {
     background-image:url(images/back_mobile.png);
   }
@@ -265,11 +261,5 @@ html, body {
     width: 6%;
     height: 6%;
   }
-
-  #trophy {
-    width: 60%;
-    height: 60%;
-  }
-
 
 }
