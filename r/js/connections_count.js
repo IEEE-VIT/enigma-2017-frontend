@@ -3,7 +3,7 @@ $(document).ready(function(){
   var x_access_token = Cookies.get('x-access-token');
   var num;
 
-  $('#logout_butt').click(function(e) {
+  $('#logout_butt img').click(function(e) {
     Cookies.remove('x-access-token');
     window.location.replace("../index.php");
   });
