@@ -540,7 +540,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   max-width: 500px;
-  min-height: 500px;
+  min-height: 575px;
   padding: 24px;
   position: relative;
   width: 80%;

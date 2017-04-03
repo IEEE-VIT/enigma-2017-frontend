@@ -50,6 +50,11 @@
       refresh();
     }
 
+
+    $("#cb_is_vit").click(function(){
+      $("#uni_name").toggle(!this.checked);
+    });
+
   });
 
 
@@ -134,13 +139,19 @@
                         <img src="img/blank.png" width="25" height="25">
                       </span></div>
 
+                  <!-- College Starts-->
                   </div>
-                  <!-- TODO : Are you a VIT Student checkbox
+                  
                   <div class="form-group" style="display: flex;">
-                    <div class="input-container">
-                      Are you a VIT Student?
-                      <input type="checkbox" id="vit_auth" name="vit_auth" class="form-control" placeholder="Hello" size="30">
+                    
+                   <!--  <div class="input-container">
+                      <label><input type="checkbox" id="cb_is_vit" name="vit_auth" class="form-control" placeholder="Hello" size="30">Are you a VIT Student?</label>
+                    </div> -->
+
+                    <div class="checkbox">
+                    <label font-size="30px"><input type="checkbox" value="" id="cb_is_vit" name="vit_auth" placeholder="Hello" size="30">Are you a VIT student?</label>
                     </div>
+                    
                     <div class="image-container">
 
                       <span id="correct-emailReg" style="float: right;">
@@ -148,8 +159,19 @@
                         <img src="img/blank.png" width="25" height="25">
                       </span></div>
 
-                  </div>      
-                  -->            
+                  </div>
+
+                  <div class="form-group" style="display: flex;" id="uni_name">
+                    <div class="input-container">
+                      <input type="text" id="txt_external_college" name="college_name" class="form-control" placeholder="University Name" size="30" onkeyup="" required="required">
+                    </div>
+                    <!-- <div class="image-container">
+                      <span id="correct-reg" class="refresh_image" style="float: right;">
+                        <img src="img/blank.png" width="25" height="25">
+                      </span>
+                    </div> -->
+                  </div>     
+                            
 
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
@@ -161,6 +183,9 @@
                       </span>
                     </div>
                   </div>
+
+                  
+                  <!-- College Ends-->
 
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
