@@ -1,7 +1,13 @@
 $(document).ready(function(){
 
+  var external_checked;
+
+  $('#cb_is_vit').click(function() {
+    $("#txt_external_college").toggle(this.checked);
+  });
+
   $("question_id").html("Testing");
-  $("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
+  //$("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 
   // if(Cookies.get('x-access-token')){
   //   window.location.replace("./r/countdown.html");
@@ -49,7 +55,6 @@ $(document).ready(function(){
         .append("<strong style='font-size: 14px;'>" + message.message + "</strong>");
         $('#success_login > .alert-success')
         .append('</div>');
-
       },
       error: function() {
         $('#loader_login').hide();
@@ -75,6 +80,7 @@ $(document).ready(function(){
     var pass = $("input#passwordReg").val();
     var reg = $("input#registration").val();
     var conf_pass = $("input#conf_pass").val();
+    var college_name = $("#cb_is_vit").attr("checked") ? $("#txt_external_college").val() : null;
     var firstName = name; // For Success/Failure Message
     // Check for white space in name for Success/Fail message
     if (firstName.indexOf(' ') >= 0) {
@@ -91,7 +97,8 @@ $(document).ready(function(){
         reg_no: reg_no,
         contact: phone,
         password: pass,
-        registration_id: reg
+        registration_id: reg,
+        college_id: college_name
       }),
       cache: false,
 
@@ -120,7 +127,7 @@ $(document).ready(function(){
 
         $('.refresh_image').html('<img src="img/blank.png" width="25" height="25"/>');
         $('#registerForm').trigger("reset");
-      
+
       },
       error: function() {
         $('#loader_reg').hide();
@@ -133,7 +140,7 @@ $(document).ready(function(){
         $('#success > .alert-danger').append("<strong style='font-size: 14px;'>Oops! Something went wrong!</strong>");
         $('#success > .alert-danger').append('</div>');
         //clear all fields
-        
+
       },
     });
   });
