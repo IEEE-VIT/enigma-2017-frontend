@@ -43,7 +43,6 @@
       }
     }
 
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
@@ -52,7 +51,10 @@
 
 
     $("#cb_is_vit").click(function(){
-      $("#uni_name").toggle(!this.checked);
+      
+        $("#txt_external_college").toggle();
+        $("#uni_div").toggle();
+  
     });
 
   });
@@ -144,12 +146,8 @@
                   
                   <div class="form-group" style="display: flex;">
                     
-                   <!--  <div class="input-container">
-                      <label><input type="checkbox" id="cb_is_vit" name="vit_auth" class="form-control" placeholder="Hello" size="30">Are you a VIT Student?</label>
-                    </div> -->
-
-                    <div class="checkbox">
-                    <label font-size="30px"><input type="checkbox" value="" id="cb_is_vit" name="vit_auth" placeholder="Hello" size="30">Are you a VIT student?</label>
+                    <div class="checkbox" style="margin-left: auto; margin-right: auto;">
+                    <label style="font-size: 20px"><input type="checkbox" value="" id="cb_is_vit" name="vit_auth" placeholder="Hello" size="40">Are you a VIT student?</label>
                     </div>
                     
                     <div class="image-container">
@@ -161,18 +159,17 @@
 
                   </div>
 
-                  <div class="form-group" style="display: flex;" id="uni_name">
+                  <div class="form-group" style="display: flex;"  id="uni_div" >
                     <div class="input-container">
-                      <input type="text" id="txt_external_college" name="college_name" class="form-control" placeholder="University Name" size="30" onkeyup="" required="required">
+                      <input type="text" id="txt_external_college" name="college_name" class="form-control" placeholder="University Name" size="30">
                     </div>
-                    <!-- <div class="image-container">
+                    <div class="image-container">
                       <span id="correct-reg" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
-                    </div> -->
+                    </div>
                   </div>     
-                            
-
+              
                   <div class="form-group" style="display: flex;">
                     <div class="input-container">
                       <input type="text" id="registration" name="reg_no" class="form-control" placeholder="Registration number" size="30" onkeyup="checkReg()" required="required">
