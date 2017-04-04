@@ -2,10 +2,6 @@ $(document).ready(function(){
 
   var external_checked;
 
-  $('#cb_is_vit').click(function() {
-    $("#txt_external_college").toggle(this.checked);
-  });
-
   $("question_id").html("Testing");
   //$("#table_body").append("<tr><td>Lol</td><td>HI</td><td>HI</td><td>HI</td></tr>");
 

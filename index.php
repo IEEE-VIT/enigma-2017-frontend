@@ -49,11 +49,20 @@
       refresh();
     }
 
-
+    var f=1;
+    document.getElementById("registration").disabled = true; 
     $("#cb_is_vit").click(function(){
       
         $("#txt_external_college").toggle();
         $("#uni_div").toggle();
+        if(f==1){
+          document.getElementById("registration").disabled = false;
+          f=0;
+        }
+        else {
+          document.getElementById("registration").disabled = true;
+          f=1;
+        }
   
     });
 
@@ -123,6 +132,21 @@
                 <div class="row" style="margin-left: 2%;">
 
                   <div class="form-group" style="display: flex;">
+                  
+                  <div class="checkbox" style="margin-left: auto; margin-right: auto;">
+                  <label style="font-size: 18px"><input type="checkbox" value="" id="cb_is_vit" name="vit_auth" placeholder="Hello" size="40"> Are you a VIT student?</label>
+                  </div>
+                  
+                  <div class="image-container">
+
+                    <span id="correct-emailReg" style="float: right;">
+
+                      <img src="img/blank.png" width="25" height="25">
+                    </span></div>
+
+                  </div>
+
+                  <div class="form-group" style="display: flex;">
                     <div class="input-field">
                       <input type="text" id="name" name="name" class="form-control" placeholder="Name" size="30" onkeyup="checkName()" required="required">
                     </div>
@@ -144,27 +168,13 @@
                   <!-- College Starts-->
                   </div>
                   
-                  <div class="form-group" style="display: flex;">
-                    
-                    <div class="checkbox" style="margin-left: auto; margin-right: auto;">
-                    <label style="font-size: 20px"><input type="checkbox" value="" id="cb_is_vit" name="vit_auth" placeholder="Hello" size="40">Are you a VIT student?</label>
-                    </div>
-                    
-                    <div class="image-container">
-
-                      <span id="correct-emailReg" style="float: right;">
-
-                        <img src="img/blank.png" width="25" height="25">
-                      </span></div>
-
-                  </div>
-
+                
                   <div class="form-group" style="display: flex;"  id="uni_div" >
                     <div class="input-container">
-                      <input type="text" id="txt_external_college" name="college_name" class="form-control" placeholder="University Name" size="30">
+                      <input type="text" id="txt_external_college" name="college_name" class="form-control" placeholder="University Name" size="30" onkeyup="checkuni()">
                     </div>
                     <div class="image-container">
-                      <span id="correct-reg" class="refresh_image" style="float: right;">
+                      <span id="correct-uni" class="refresh_image" style="float: right;">
                         <img src="img/blank.png" width="25" height="25">
                       </span>
                     </div>

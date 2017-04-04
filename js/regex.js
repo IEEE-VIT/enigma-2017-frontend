@@ -2,7 +2,7 @@
 var a=0,b=0,c=0,d=0,e=0,f=0;
 
 function btn_disable() {
-  if(a|b|c|d == 0){
+  if(a|b|c|d == 0 ){
     document.getElementById("signupButton").disabled = true; 
   }
   else {
@@ -35,21 +35,35 @@ function checkEmail(){
   }
   btn_disable();
 }
-function checkReg(){
-  checkEmail();
-  var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
-  if(($('#registration').val()).match(reg)){
-    $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
-    c=1;
+function checkuni(){
+  if($('#txt_external_college').val()!==''){
+    $('#correct-uni').html('<img src="img/tick.png" width="25" height="25"/>');
+    // a=1; 
   }
   else{
-    $('#correct-reg').html('<img src="img/cross.png" width="25" height="25"/>');
-    c=0;
+    $('#correct-uni').html('<img src="img/cross.png" width="25" height="25"/>');
+   // a=0;
   }
   btn_disable();
 }
+function checkReg(){
+  if(f==1)
+  { 
+    checkEmail();
+    var reg = /^[1][0-9][a-zA-Z]{3}\d{4}$/
+    if(($('#registration').val()).match(reg)){
+      $('#correct-reg').html('<img src="img/tick.png" width="25" height="25"/>');
+      c=1;
+    }
+    else{
+      $('#correct-reg').html('<img src="img/cross.png" width="25" height="25"/>');
+      c=0;
+    }
+    btn_disable();
+  }
+}
 function checkPh(){
-  checkReg();
+  if(f==1)checkReg();
   var phoneno=/^\d{10}$/;
   if(($('#contact').val()).match(phoneno)){
     $('#correct-contact').html('<img src="img/tick.png" width="25" height="25"/>');
