@@ -76,7 +76,7 @@ $(document).ready(function(){
     var pass = $("input#passwordReg").val();
     var reg = $("input#registration").val();
     var conf_pass = $("input#conf_pass").val();
-    var college_name = $("#cb_is_vit").attr("checked") ? $("#txt_external_college").val() : null;
+    var college_name = $("#cb_is_vit").prop("checked") ? null : $("#txt_external_college").val();
     var firstName = name; // For Success/Failure Message
     // Check for white space in name for Success/Fail message
     if (firstName.indexOf(' ') >= 0) {
