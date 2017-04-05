@@ -16,6 +16,8 @@ See the License for the specific language governing permissions and
 limitations under the License
 -->
 <html lang="en">
+
+<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:20:10 GMT -->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,13 +32,14 @@ limitations under the License
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.html">
 
   <script type="text/javascript">
   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("hamburger").style.display = "none";
   }
 
   /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -44,6 +47,7 @@ limitations under the License
     document.getElementById("mySidenav").style.width = "0";
     console.log("Close");
     document.body.style.backgroundColor = "white";
+    document.getElementById("hamburger").style.display = "block";
   }
   </script>
 
@@ -65,26 +69,28 @@ limitations under the License
   </style>
 </head>
 <body style="background-color: white;">
-  <div class="mdl-layout__container"><div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout">
+  <div class="mdl-layout__container" style="background:white;"><div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout" style="color:white;">
 
-    <div id="mySidenav" class="sidenav" style="z-index: 200; width: 0px;">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div id="mySidenav" class="sidenav" style="z-index: 200; width: 0px;background-color:rgba(47,45,45,0.3);">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a>
       <div style="margin-left: 10px;">
-        <a href="#" style="margin-top: 40px;">Home</a>
+        <a href="#" style="margin-top: 40px;color:white;">Home</a>
+        <br style="padding:10px;margin-left:20px;margin-right:50px;">
         <div id="leader_butt">
-          <a href="#">LeaderBoard</a>
+          <a href="#" style="color:white;">LeaderBoard</a>
         </div>
+        <br style="padding-top:10px;margin-left:20px;margin-right:50px;">
         <div id="logout_butt">
-          <a href="#">Logout</a>
+          <a href="#" style="color:white;">Logout</a>
         </div>
       </div>
     </div>
 
-    <main class="mdl-layout__content " id="main" style="background-color: #424242;">
-      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid">
-        <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" onclick="openNav()">☰</span>
+    <main class="mdl-layout__content " id="main" style="background-color:black;" >
+      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;"> 
+        <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
-        <span style="font-size:x-large;position: absolute;right: 40px;top: 50px;color: white;">Score: <span id="score_id">100</span></span>
+        <span style="font-size:x-large;position: absolute;right: 50px;top: 50px;color: white;">Score: <span id="score_id">100</span></span>
         
         <div id="head-logo"><img src="images/lgoo.jpg" style="max-height:120px;"></div>
 
@@ -108,9 +114,9 @@ limitations under the License
           </div>
           <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
-            <img src="images/unlock.png" class="lock-img">
-            <img src="images/lock.png" class="lock-img" id="bg-lock"> 
-            <img src="images/lock.png" class="lock-img">
+        
+            <img src="images/ieee.gif" class="lock-img" id="bg-lock"style="height:30px;width:80px;margin-bottom:-15px;"> 
+        
             <strong style="color:white;">...</strong></p>
         </form>
         <!-- TODO: popup for mini lead -->
@@ -137,7 +143,7 @@ limitations under the License
     </main>
   </div></div>
 
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="../../code.getmdl.io/1.3.0/material.min.js"></script>
   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
@@ -150,4 +156,6 @@ limitations under the License
 
 
 </body>
+
+<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:21:01 GMT -->
 </html>
