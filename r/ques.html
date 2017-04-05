@@ -102,7 +102,10 @@ limitations under the License
           </div>
           <!-- Submit Button -->
           <img src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;">
-          <img src="images/bulby.png" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;">
+          <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;" onclick="hint()">
+          <div class="popup">
+            <span class="popuptext" id="hint-popup">Lorem ipsum dolor</span>
+          </div>
           <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
             <img src="images/unlock.png" class="lock-img">
@@ -110,17 +113,23 @@ limitations under the License
             <img src="images/lock.png" class="lock-img">
             <strong style="color:white;">...</strong></p>
         </form>
-        <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;" onclick="popup()" class="popup">
+        <!-- TODO: popup for mini lead -->
+        <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;" class="popup">
           <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;">
-          <span class="popuptext" id="mini-lead" style="z-index: 200;">A Simple Popup!</span>
+          <span class="popuptext" id="mini-lead" style="z-index: 200;">Mini-lidddddd</span>
 
         </span>
 
         <script>
+
+        function hint() {
+          $("#hint_bulb").attr("src","images/bulb-glow.png");
+          var popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+        }
         // When the user clicks on div, open the popup
         function popup() {
-            var popup = document.getElementById("mini-lead");
-            popup.classList.toggle("show");
+            
         }
         </script>
 

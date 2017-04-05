@@ -19,6 +19,7 @@ $(document).ready(function(){
         else {
           $('#ques').html(message.data);
         }
+        $("#hint-popup").html(message.hint);
         $('#score_id').html(message.score);
         num = message.num;
       }
