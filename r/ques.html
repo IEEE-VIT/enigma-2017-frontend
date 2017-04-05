@@ -33,6 +33,7 @@ limitations under the License
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
   <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.html">
+  <link rel="stylesheet" href="lead.css">
 
   <script type="text/javascript">
   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
@@ -90,9 +91,9 @@ limitations under the License
       <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;"> 
         <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
-        <span style="font-size:x-large;position: absolute;right: 50px;top: 50px;color: white;">Score: <span id="score_id">100</span></span>
+        <span style="font-size:x-large;position: absolute;right: 50px;top: 50px;color: white;"><span id="score_id">100 <img src="images/star.png" style="max-height: 23px;margin-top: -8px;"></span></span>
         
-        <div id="head-logo"><img src="images/lgoo.jpg" style="max-height:120px;"></div>
+        <div id="head-logo"><img src="images/lgoo.png" style="max-height:140px; margin-top: -10px;"></div>
 
         <div style="" id="ques">
           <h2 style="margin-top: 10px; margin-right: auto;margin-left: auto;color: white;" id="question_id">Question Placeholder</h2>
@@ -108,34 +109,61 @@ limitations under the License
           </div>
           <!-- Submit Button -->
           <img src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;">
-          <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;" onclick="hint()">
+          <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
           <div class="popup">
             <span class="popuptext" id="hint-popup">Lorem ipsum dolor</span>
           </div>
           <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
         
-            <img src="images/ieee.gif" class="lock-img" id="bg-lock"style="height:30px;width:80px;margin-bottom:-15px;"> 
+            <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;"> 
         
             <strong style="color:white;">...</strong></p>
         </form>
         <!-- TODO: popup for mini lead -->
-        <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;" class="popup">
-          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;">
-          <span class="popuptext" id="mini-lead" style="z-index: 200;">Mini-lidddddd</span>
-
+        <span style="font-size:30px;cursor:pointer; position: absolute; right: 40px; bottom: 50px;">
+          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
         </span>
+        
+          <div  class="popup_ld">
+            <span class="popuptext_ld" id="mini-lead">
+              <table class="table" id="mini-result_table">
+                <thead>
+                  <tr>
+                    <td><strong>Username</strong></td>
+                    <td><strong>Rank</strong></td>
+                  </tr>
+                </thead>
+                <tbody id="mini-table_body">
+                  <tr>
+                    <td>Arushit</td>
+                    <td>1</td>
+                  </tr>
+                   <tr>
+                    <td>Sahir</td>
+                    <td>2</td>
+                  </tr>
+                   <tr>
+                    <td>Karishnu</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </span>
+          </div>
 
+        
         <script>
 
         function hint() {
           $("#hint_bulb").attr("src","images/bulb-glow.png");
           var popup = document.getElementById("hint-popup");
-            popup.classList.toggle("show");
+          popup.classList.toggle("show");
         }
         // When the user clicks on div, open the popup
         function popup() {
-            
+          var popup = document.getElementById("mini-lead");
+          popup.classList.toggle("show");  
         }
         </script>
 
