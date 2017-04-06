@@ -424,12 +424,12 @@
                     <ol style="color: white; list-style: decimal; list-style-position: inside; text-align: center;">
                       <li >The event shall be held over 2 days, from 9<sup>th</sup> to 11<sup>th</sup> April</li><br>
                       <li>Participation is open to students of VIT University. Each participant represents himself/herself only.</li><br>
-                      <li>The participants' aim is to crack the levels as quickly as they can so as to place themselves at the top of the leaderboard.</li><br>
                       <li>The event entails an Online Cryptic Hunt in which participants must make their way through a series of levels filled with cryptic questions.</li><br>
                       <li>At each level, the participants will encounter a number of clues which shall, altogether, point to one answer. Each level has one and only one correct answer.</li><br>
                       <li style="letter-spacing: 1px;">Answers will always be lowercase, alphanumeric and may contain spaces. Special characters are allowed.</li><br>
                       <li>Official clues may be released on the Facebook event if and when deemed necessary by the organizers.</li><br>
                       <li>Beware of the spelling you enter, we won't auto correct your spellings.</li><br>
+                      <li>Official clues may be released on the Facebook event if and when deemed necessary by the organizers.</li><br>
                     </ol>
 
                   </div>
@@ -448,11 +448,11 @@
                 </div>
                 <div>
                   <p>
-                    On 5th august 2016 Enigma, the first of its kind, went live and 100 hours, 750+ participants later…our quest for finding that one brilliant mind was complete. There were a total of 30 questions in all, whose difficulty progressively increased and the participants had to solve each question to proceed to the next one, a dynamic update of the leaderboard position took it to a whole new level.
+                    On 5th august 2016 Enigma, the first of its kind, went live and 100 hours, 750+ participants later; our quest for finding that one brilliant mind was complete. There were a total of 30 questions in all, whose difficulty progressively increased and the participants had to solve each question to proceed to the next one, a dynamic update of the leaderboard position took it to a whole new level.
                   </p>
                   <p>
-                    A perfect blend of technical awareness and cool logic, it now stands as one of the most novel online events conducted in the university.
-                    Even the winner not being able to decrypt all the questions, in 2016, Enigma won. Let’s see what 2017 has in store for us.
+                    A perfect blend of technical awareness and cool logic, ENIGMA, now stands as one of the most novel online events conducted in the university.
+                    Even the winner not being able to decrypt all the questions, in 2016, Enigma won. Let’s see what 2017 has in store for us
                   </p>
                   <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay="100ms"> <!--Dont change the time, as it is set according to the number-->
                     <div class="enig2016-box"> <span class="count">773</span>

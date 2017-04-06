@@ -50,7 +50,7 @@
 .flip-clock-wrapper {
   text-align: center;
   position: relative;
-  width: 70%;
+  width: 100%;
   margin: 1em;
 }
 
@@ -375,9 +375,13 @@
   animation: hide 0.5s 0.2s linear both; }
 
 #countdd {
-  margin-top: -10px; 
-  margin-right: auto;
-  margin-left: 20%;
+  margin-top: -250px; 
+  margin-left: 50%;
+  
+}
+
+#footer-img {
+  display: none;
 }
 
 @-webkit-keyframes show {
@@ -441,6 +445,18 @@
     display: none;
   }
   #countdd {
-    margin-left: 50px;
+    margin-left: 25%;
+  }
+  .flip-clock-wrapper {
+    width: 70%;
+  }
+  #footer-img {
+    display: block;
+  }
+}
+
+@media (min-width: 1400px){
+  #countdd {
+    margin-left: 70%;
   }
 }
