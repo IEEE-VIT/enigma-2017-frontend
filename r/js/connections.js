@@ -20,6 +20,9 @@ $(document).ready(function(){
           $('#ques').html(message.data);
         }
         $("#hint-popup").html(message.hint);
+        $("#hint-popup").append(" ");
+        $("hint-count").html(message.hints); //TODO: Check "hints" variable name, ask karishnu
+        $("hint-count").append(" ");
         $('#score_id').html(message.score);
         num = message.num;
       }

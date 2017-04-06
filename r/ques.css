@@ -17,7 +17,7 @@
     position: absolute;
     z-index: 1;
     left: 50%;
-    margin-left: -170px;
+    margin-left: 20px;
 }
 #myPopup h1 {
 	font-weight: 400;
@@ -28,12 +28,11 @@
 .popup .popuptext::after {
     content: "";
     position: absolute;
-    bottom: 100%;
-    left: 50%;
+    right: 100%;
     margin-left: -5px;
     border-width: 8px;
     border-style: solid;
-    border-color:transparent transparent rgba(53, 175, 102, 0.5) transparent;
+    border-color:transparent rgba(53, 175, 102, 0.5) transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -41,7 +40,7 @@
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-    margin-top: 25px;
+    margin-top: -20px;
 }
 
 /* The actual popup (appears on top) */
@@ -142,5 +141,29 @@
 
 	.popup_ld .show {
 	    margin-top: -170px;
+	}
+
+	/* The actual popup (appears on top) */
+	.popup .popuptext {
+	    z-index: 1;
+	    left: 50%;
+	    margin-left: -170px;
+	}
+	.popup .popuptext::after {
+	    content: "";
+	    position: absolute;
+	    bottom: 100%;
+	    left: 50%;
+	    margin-left: -5px;
+	    border-width: 8px;
+	    border-style: solid;
+	    border-color:transparent transparent rgba(53, 175, 102, 0.5) transparent;
+	}
+
+	.popup .show {
+	    visibility: visible;
+	    -webkit-animation: fadeIn 1s;
+	    animation: fadeIn 1s;
+	    margin-top: 25px;
 	}
 }
