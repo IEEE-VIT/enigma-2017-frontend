@@ -133,6 +133,14 @@
 	background-color:rgba(47,45,45,0.3);
 }
 
+#trophy-span {
+	font-size:30px;
+	cursor:pointer; 
+	position: absolute; 
+	right: 20px; 
+	bottom: 20px;"
+}
+
 @media (min-width: 1400px) {
 	#ques {
 		width: 100%;
