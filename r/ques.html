@@ -91,7 +91,7 @@ limitations under the License
     </div>
 
     <main class="mdl-layout__content " id="main" style="background-color:black;" >
-      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;"> 
+      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;">
         <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
         <span id="scorehint" style="">
@@ -99,7 +99,7 @@ limitations under the License
           <span id="hint-count">20 </span><img src="images/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
           </span>
         </span>
-        
+
         <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
 
         <div class="col-md-8" id="ques">
@@ -112,30 +112,30 @@ limitations under the License
 
           <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield" id="ans-input">
             <input class="mdl-textfield__input" type="text" id="answer_id" style="background-color:rgba(255, 255, 255, 0.1);color:white;text-align:center;" placeholder="Answer"/>
-            
           </div>
           <!-- Submit Button -->
-            
-          
+
+
             <input type="image" src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;margin-left: 5px; margin-bottom: -2%;"/>
-             <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
-            
-          
+             <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;">
+
+
           <div class="popup">
             <span class="popuptext" id="hint-popup"><p style="margin-bottom: 0px;">0,lorem ipsum dolor,lorem ipsum dolor,lorem ipsum dolor,lorem ipsum dolor</p></span>
           </div>
          <!--  <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
-        
-            <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;"> 
-        
+
+            <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;">
+
             <strong style="color:white;">...</strong></p> -->
         </form>
-        
+
         <span id="trophy-span">
+
           <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
         </span>
-        
+
           <div  class="popup_ld">
             <span class="popuptext_ld" id="mini-lead">
               <table class="table" id="mini-result_table">
@@ -163,22 +163,12 @@ limitations under the License
             </span>
           </div>
 
-        
-        <script>
 
-        function hint() {
-          var a =confirm("Warning: You are using a hint!");
-          if(a == true){
-            $("#hint_bulb").attr("src","images/bulb-glow.png");
-            $("#hint_count").attr("src","images/bulb-glow.png");
-            var popup = document.getElementById("hint-popup");
-            popup.classList.toggle("show");
-          }
-        }
+        <script>
         // When the user clicks on div, open the popup
         function popup() {
           var popup = document.getElementById("mini-lead");
-          popup.classList.toggle("show");  
+          popup.classList.toggle("show");
         }
         </script>
 
