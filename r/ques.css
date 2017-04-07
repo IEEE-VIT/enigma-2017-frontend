@@ -114,6 +114,24 @@
 	margin-bottom: auto;
 	align-content:center;
 }
+#scorehint {
+	font-size:x-large;
+	position: absolute;
+	right: 50px;
+	top: 48px;
+	color: white;
+}
+
+#enigma_logo {
+	max-height:140px; 
+	margin-top: -10px;
+}
+
+#mySidenav {
+	z-index: 200; 
+	width: 0px;
+	background-color:rgba(47,45,45,0.3);
+}
 
 @media (min-width: 1400px) {
 	#ques {
@@ -125,6 +143,7 @@
 	#head-logo {
 		width: inherit;
 		margin-top: 20px;
+		max-height: 10%;
 	}
 
 	#ques {
@@ -138,16 +157,25 @@
 	    height: 60%;
 	}*/
 
+	#enigma_logo {
+		max-height: 100px;
+	}
+
+	#scorehint {
+		font-size: large;
+		right: 30px;
+	}
+
 	#ans-input {
 		width: 90%
 	}
 
 	.popup_ld .popuptext_ld {
-	    margin-left: -10px;
+	    margin-left: -13%;
 	}
 
 	.popup_ld .show {
-	    margin-top: -170px;
+	    margin-top: -57%;
 	}
 
 	/* The actual popup (appears on top) */
@@ -172,5 +200,17 @@
 	    -webkit-animation: fadeIn 1s;
 	    animation: fadeIn 1s;
 	    margin-top: 25px;
+	}
+
+	.sidenav a {
+		font-size: large;
+	}
+
+	.sidenav div br {
+		display: none;
+	}
+
+	#mySidenav {
+		background-color: rgba(47,45,45,0.5);
 	}
 }

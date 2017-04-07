@@ -199,5 +199,9 @@ html, body {
     width: 6%;
     height: 6%;
   }
+  .sidenav a {
+    font-size: large;
+  }
+  
 
 }
