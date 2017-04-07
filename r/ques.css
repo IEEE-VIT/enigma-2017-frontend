@@ -111,7 +111,14 @@
 	width: 72.5%; 
 	margin-left: auto; 
 	margin-right: auto;
+	margin-bottom: auto;
 	align-content:center;
+}
+
+@media (min-width: 1400px) {
+	#ques {
+		width: 100%;
+	}
 }
 
 @media (max-width: 950px) {

@@ -77,8 +77,8 @@
 <body id="page-top" style="overflow: visible;">
 
   <!-- Preloader -->
-  <div id="preloader">
-    <div id="status">&nbsp;</div>
+  <div id="preloader" style="display: none;">
+    <div id="status" >&nbsp;</div>
   </div>
 
   <!-- About Section -->

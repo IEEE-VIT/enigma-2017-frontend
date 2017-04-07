@@ -39,6 +39,7 @@ $(document).ready(function(){
   });
 
   $("#answerForm").submit(function(e) {
+    console.log("BlueBlaa"); //Test, remove it later
     e.preventDefault();
     var answer = $("input#answer_id").val();
     $.ajax({

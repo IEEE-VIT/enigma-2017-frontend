@@ -23,6 +23,8 @@ limitations under the License
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+
   <title>Home | Enigma 2017</title>
 
   <!-- Add to homescreen for Chrome on Android -->
@@ -33,8 +35,9 @@ limitations under the License
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
   <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.html">
-  <link rel="stylesheet" href="lead.css">
 
+  <link rel="stylesheet" href="lead.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
   <script type="text/javascript">
   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
   function openNav() {
@@ -99,7 +102,7 @@ limitations under the License
         
         <div id="head-logo"><img src="images/lgoo.png" style="max-height:140px; margin-top: -10px;"></div>
 
-        <div style="" id="ques">
+        <div class="col-md-8" id="ques">
           <h2 style="margin-top: 10px; margin-right: auto;margin-left: auto;color: white;" id="question_id">Question Placeholder</h2>
           <img src="images/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 40px;">
         </div>
@@ -108,17 +111,21 @@ limitations under the License
         <form action="#" style="margin-right: auto;margin-left: auto;" id="answerForm">
 
           <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield" id="ans-input">
-            <input class="mdl-textfield__input" type="text" id="answer_id" style="background-color:rgba(255, 255, 255, 0.1);color:white;text-align:center;" placeholder ="Answer">
+            <input class="mdl-textfield__input" type="text" id="answer_id" style="background-color:rgba(255, 255, 255, 0.1);color:white;text-align:center;" placeholder="Answer"/>
             
           </div>
           <!-- Submit Button -->
-          <img src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;">
-          <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
+            
+          
+            <input type="image" src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;margin-left: 5px; margin-bottom: -2%;"/>
+             <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
+            
+          
           <div class="popup">
             <span class="popuptext" id="hint-popup">Lorem ipsum dolor</span>
           </div>
-          <p style="margin-top: 3%; font-size: 20px;">
-            <!-- <strong style="color:white;">...</strong>
+         <!--  <p style="margin-top: 3%; font-size: 20px;">
+            <strong style="color:white;">...</strong>
         
             <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;"> 
         
@@ -160,10 +167,13 @@ limitations under the License
         <script>
 
         function hint() {
-          $("#hint_bulb").attr("src","images/bulb-glow.png");
-          $("#hint_count").attr("src","images/bulb-glow.png");
-          var popup = document.getElementById("hint-popup");
-          popup.classList.toggle("show");
+          var a =confirm("Warning: You are using a hint!");
+          if(a == true){
+            $("#hint_bulb").attr("src","images/bulb-glow.png");
+            $("#hint_count").attr("src","images/bulb-glow.png");
+            var popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+          }
         }
         // When the user clicks on div, open the popup
         function popup() {
