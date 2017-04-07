@@ -241,4 +241,8 @@
 	#mySidenav {
 		background-color: rgba(47,45,45,0.5);
 	}
+
+	#trophy-span {
+		display: none;
+	}
 }
