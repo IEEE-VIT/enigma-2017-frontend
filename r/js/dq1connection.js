@@ -9,6 +9,13 @@
                 var ch = checkstr.charCodeAt(checkstr.length-1);
                    if (ch==101){str1 += defaultStr.charAt(0);}
                           else if (ch==113){str1 += "'";}
+                          else if (ch==81){str1 += '"';}
+                          else if (ch==87){str1 += "<";}
+                          else if (ch==69){str1 += ">";}
+                          else if (ch==123){str1 += "?";}
+                          else if (ch==34){str1 += "-";}
+
+
                           else if (ch==119){str1 += defaultStr.charAt(1);}
                           else if (ch==114){str1 += defaultStr.charAt(2);}
                           else if (ch==116){str1 += defaultStr.charAt(3);}
