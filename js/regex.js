@@ -117,4 +117,8 @@ function refresh(){
   console.log("Test1");
   $('#success').hide();
   $('#signupButton').show();
+  document.getElementById("registration").disabled = true;
+  $("#txt_external_college").show();
+  $("#uni_div").show();  
+
 }

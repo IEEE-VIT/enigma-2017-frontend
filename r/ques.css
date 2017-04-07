@@ -9,7 +9,7 @@
 .popup .popuptext {
     visibility: hidden;
     width: 300px;
-    background-color: rgba(53, 175, 102, 0.5);
+    background-color: rgba(42, 101, 65, 0.8);
     color: #f1f1f1;
     text-align: center;
     border-radius: 6px;
@@ -18,6 +18,7 @@
     z-index: 1;
     left: 50%;
     margin-left: 20px;
+    margin-top: -20px;
 }
 #myPopup h1 {
 	font-weight: 400;
@@ -32,7 +33,7 @@
     margin-left: -5px;
     border-width: 8px;
     border-style: solid;
-    border-color:transparent rgba(53, 175, 102, 0.5) transparent transparent;
+    border-color:transparent transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -72,7 +73,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: /*#555*/ transparent transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -114,12 +115,23 @@
 	margin-bottom: auto;
 	align-content:center;
 }
+
+#ques img {
+	margin-right: auto;
+	margin-left: auto; 
+	margin-top: 40px;
+}
 #scorehint {
 	font-size:x-large;
 	position: absolute;
 	right: 50px;
 	top: 48px;
 	color: white;
+}
+
+#answerForm {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #enigma_logo {
@@ -159,6 +171,9 @@
 	     width: inherit;
     }
 
+    #ques img {
+    	margin-top: 10px;
+    }
 
     /*#trophy {
 	    width: 60%;
@@ -167,6 +182,10 @@
 
 	#enigma_logo {
 		max-height: 100px;
+	}
+
+	#answerForm {
+		margin-top: -40px;
 	}
 
 	#scorehint {
@@ -188,6 +207,7 @@
 
 	/* The actual popup (appears on top) */
 	.popup .popuptext {
+		width: 250px;
 	    z-index: 1;
 	    left: 50%;
 	    margin-left: -170px;
@@ -200,14 +220,14 @@
 	    margin-left: -5px;
 	    border-width: 8px;
 	    border-style: solid;
-	    border-color:transparent transparent rgba(53, 175, 102, 0.5) transparent;
+	    border-color:transparent transparent /*rgba(53, 175, 102, 0.5)*/ transparent transparent;
 	}
 
 	.popup .show {
 	    visibility: visible;
 	    -webkit-animation: fadeIn 1s;
 	    animation: fadeIn 1s;
-	    margin-top: 25px;
+	    margin-top: -116px;
 	}
 
 	.sidenav a {

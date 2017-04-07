@@ -53,17 +53,17 @@
     document.getElementById("registration").disabled = true;
     $("#cb_is_vit").click(function(){
 
-      $("#txt_external_college").toggle();
-      $("#uni_div").toggle();
-      if(f==1){
+      if(this.checked){
+        $("#txt_external_college").hide();
+        $("#uni_div").hide();
         document.getElementById("registration").disabled = false;
-        f=0;
-      }
-      else {
-        document.getElementById("registration").disabled = true;
-        f=1;
       }
 
+      else {
+        $("#txt_external_college").show();
+        $("#uni_div").show();
+        document.getElementById("registration").disabled = true;
+      }
     });
 
   });
