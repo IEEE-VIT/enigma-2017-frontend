@@ -1,0 +1,209 @@
+<!doctype html>
+<!--
+Material Design Lite
+Copyright 2015 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License
+-->
+<html lang="en">
+
+<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:20:10 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+
+  <title>Home | Enigma 2017</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Enigma 2017">
+  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.html">
+
+  <link rel="stylesheet" href="lead.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script type="text/javascript">
+  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("hamburger").style.display = "none";
+  }
+
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    console.log("Close");
+    document.body.style.backgroundColor = "white";
+    document.getElementById("hamburger").style.display = "block";
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="material.css">
+  <link rel="stylesheet" type="text/css" href="ques.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  #view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+  </style>
+</head>
+<body style="background-color: white;">
+  <div class="mdl-layout__container" style="background:white;"><div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout" style="color:white;">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a>
+      <div style="margin-left: 10px;">
+        <a href="#" style="margin-top: 40px;color:white;" class="sidenav-font">Home</a>
+        <br style="padding:10px;margin-left:20px;margin-right:50px;">
+        <div id="leader_butt">
+          <a href="#" style="color:white;" class="sidenav-font">LeaderBoard</a>
+        </div>
+        <br style="padding-top:10px;margin-left:20px;margin-right:50px;">
+        <div id="logout_butt">
+          <a href="#" style="color:white;" class="sidenav-font">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="mdl-layout__content " id="main" style="background-color:black;" >
+      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;"> 
+        <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
+
+        <span id="scorehint" style="">
+          <span id="score_id">100 </span> <img src="images/star.png" style="max-height: 20px;margin-top: -8px;">
+          <span id="hint-count">20 </span><img src="images/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
+          </span>
+        </span>
+        
+        <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
+
+        <div class="col-md-8" id="ques">
+          <h2 style="margin-top: 10px; margin-right: auto;margin-left: auto;color: white;" id="question_id">Question Placeholder</h2>
+          <img src="images/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 40px;">
+        </div>
+
+        <!-- Answer Textfield -->
+        <form action="#" style="margin-right: auto;margin-left: auto;" id="answerForm">
+
+          <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield" id="ans-input">
+            <input class="mdl-textfield__input" type="text" id="answer_id" style="background-color:rgba(255, 255, 255, 0.1);color:white;text-align:center;" placeholder="Answer" />
+            <script>
+
+           
+           
+          </script>
+          </div>
+          <!-- Submit Button -->
+            
+          
+            <input type="image" src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;margin-left: 5px; margin-bottom: -2%;"/>
+             <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
+            
+          
+          <div class="popup">
+            <span class="popuptext" id="hint-popup">Lorem ipsum dolor</span>
+          </div>
+         <!--  <p style="margin-top: 3%; font-size: 20px;">
+            <strong style="color:white;">...</strong>
+        
+            <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;"> 
+        
+            <strong style="color:white;">...</strong></p> -->
+        </form>
+        
+        <span id="trophy-span">
+          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
+        </span>
+        
+          <div  class="popup_ld">
+            <span class="popuptext_ld" id="mini-lead">
+              <table class="table" id="mini-result_table">
+                <thead>
+                  <tr>
+                    <td><strong>Username</strong></td>
+                    <td><strong>Rank</strong></td>
+                  </tr>
+                </thead>
+                <tbody id="mini-table_body">
+                  <tr>
+                    <td>Arushit</td>
+                    <td>1</td>
+                  </tr>
+                   <tr>
+                    <td>Sahir</td>
+                    <td>2</td>
+                  </tr>
+                   <tr>
+                    <td>Karishnu</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </span>
+          </div>
+
+        
+        <script>
+
+        function hint() {
+          var a =confirm("Warning: You are using a hint!");
+          if(a == true){
+            $("#hint_bulb").attr("src","images/bulb-glow.png");
+            $("#hint_count").attr("src","images/bulb-glow.png");
+            var popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+          }
+        }
+        // When the user clicks on div, open the popup
+        function popup() {
+          var popup = document.getElementById("mini-lead");
+          popup.classList.toggle("show");  
+        }
+        </script>
+
+      </div>
+    </main>
+  </div></div>
+
+  <script src="../../code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="js/jquery.counterup.js"></script>
+  <script type="text/javascript" src="js/waypoints.js"></script>
+  <script type="text/javascript" src="js/connections.js"></script>
+  <script type="text/javascript" src="js/dq1connection.js"></script>
+  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/js.cookie.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:21:01 GMT -->
+</html>
