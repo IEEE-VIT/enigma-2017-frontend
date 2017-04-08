@@ -2,14 +2,11 @@ $(document).ready(function(){
   //console.log($('#registerForm'));
   // Get the modal
   var modal = document.getElementById('myModal');
+  modal.style.display = "none";
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
-  
-    modal.style.display = "block";
- 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
@@ -53,7 +50,7 @@ $(document).ready(function(){
       $("#ques-loader").hide();
       $("#answerForm").show();
       if(message.type == 'default'){
-        $("#question_id").append("Q" + message.num +  " " + message.question);
+        $("#question_id").append("Q" + (message.num + 1) +  " " + message.question);
         $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\"/>");
       }
       else {
@@ -90,6 +87,11 @@ $(document).ready(function(){
   }
 );
 
+function showModal(message){
+  modal.style.display = "block";
+  $('#notification_box').html(message);
+}
+
 function showBan(status) {
   console.log(status);
   if(status){
@@ -102,26 +104,26 @@ function showBan(status) {
 }
 
 function startTimer(duration, display) {
-    var timer = duration, hours, minutes, seconds;
-    setInterval(function () {
-        hours = ~~(timer/(1000*60*60));
-        minutes = ~~((timer - (hours*60*60*1000))/(60*1000));
-        seconds = ~~((timer - (hours*60*60*1000) - (minutes*60*1000))/1000);
-        display.textContent = ((hours < 10) ? ("0" + hours) : hours) + ":" + ((minutes < 10) ? ("0" + minutes) : minutes) + ":"
-          + ((seconds < 10) ? ("0" + seconds) : seconds);
+  var timer = duration, hours, minutes, seconds;
+  setInterval(function () {
+    hours = ~~(timer/(1000*60*60));
+    minutes = ~~((timer - (hours*60*60*1000))/(60*1000));
+    seconds = ~~((timer - (hours*60*60*1000) - (minutes*60*1000))/1000);
+    display.textContent = ((hours < 10) ? ("0" + hours) : hours) + ":" + ((minutes < 10) ? ("0" + minutes) : minutes) + ":"
+    + ((seconds < 10) ? ("0" + seconds) : seconds);
 
-        timer = timer - 1000;
+    timer = timer - 1000;
 
-        if(timer < 0){
-          timer = duration;
-        }
-    }, 1000);
+    if(timer < 0){
+      timer = duration;
+    }
+  }, 1000);
 }
 
 function showTimer(timeLeft) {
-    var fiveMinutes = timeLeft,
-        display = document.querySelector('#ban-time');
-    startTimer(fiveMinutes, display);
+  var fiveMinutes = timeLeft,
+  display = document.querySelector('#ban-time');
+  startTimer(fiveMinutes, display);
 };
 
 function updateHints() {
@@ -155,7 +157,13 @@ $("#answerForm").submit(function(e) {
     }),
     cache: false,
     success: function(message, textStatus, request) {
-      window.location.replace("ques.html");
+      console.log(message);
+      if(message.code!='0'){
+        showModal(message.message);
+      }
+      else{
+        window.location.replace("ques.html");
+      }
     }
   });
 });
