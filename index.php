@@ -22,7 +22,7 @@
 
   $(document).ready(function() {
 
-    console.log($('#registerForm'));
+    //console.log($('#registerForm'));
     // Get the modal
     var modal = document.getElementById('myModal');
 

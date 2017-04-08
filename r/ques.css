@@ -154,10 +154,55 @@
 	font-size:30px;
 	cursor:pointer; 
 	position: absolute; 
-	right: 20px; 
-	bottom: 20px;"
+	right: 40px; 
+	bottom: 50px;"
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: rgba(47,45,45,0.4);
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid rgba(47,45,45,0.4);
+    width: 80%; /* Could be more or less, depending on screen size */
+     -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.login {
+  
+  background-color: rgba(34, 131, 5, 0.88);;
+  
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 500px;
+  
+  padding: 24px;
+  position: relative;
+  width: 80%;
+ 	z-index: 100;
+}
+
+#modal_message {
+	margin-top: 7%;
+}
+
+#modal_message h3 {
+	margin: 0 0;
+}
 
 
 @media (min-width: 1400px) {
@@ -209,6 +254,14 @@
 
 	#ans-input {
 		width: 90%
+	}
+
+	#modal_message {
+		padding: 5px;
+	}
+
+	#modal_message h3 {
+		font-size: large;
 	}
 
 	.popup_ld .popuptext_ld {
