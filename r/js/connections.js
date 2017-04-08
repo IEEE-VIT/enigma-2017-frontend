@@ -17,13 +17,13 @@ $(document).ready(function(){
     beforeSend: function(){
       $("#image_id").hide();
       $("#ques-loader").show();
-      $("#answerForm").hide();
+      //$("#answerForm").hide();
     },
 
     success: function(message, textStatus, request) {
       $("#image_id").show();
       $("#ques-loader").hide();
-      $("#answerForm").show();
+      //$("#answerForm").show();
       if(message.type == 'default'){
         $("#question_id").append("Q" + message.num +  " " + message.question);
         $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\" style=\"max-height: 270px; max-width: 60%; margin-right: auto;margin-left: auto; margin-top: 10px;\"/>");

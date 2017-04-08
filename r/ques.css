@@ -83,49 +83,14 @@
     margin-top: -200px;
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
-
-@-webkit-keyframes bgfade {
-    from {background-color: black;} 
-    to {background-color: white;}
-}
-
-@keyframes bgfade {
-    from {background-color: black;}
-    to {background-color:white;}
-}
-
-@-webkit-keyframes fgfade {
-    from {background-color: rgb(103, 98, 98);} 
-    to {background-color: black;}
-}
-
-@keyframes fgfade {
-    from {background-color: rgb(103, 98, 98);}
-    to {background-color:black ;}
-}
-
-#bg-ques-vid {
-	
-}
 #bg-ques-vid {
 	height: 90vh;
 	text-align: center;
-	background-image: url('images/video-ques.gif');
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: overlay;
-	animation: bgfade;
-	animation-duration: 5s;
+	
 }
 
 #head-logo {
