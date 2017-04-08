@@ -3,6 +3,8 @@ $(document).ready(function(){
   var num;
   var hint;
   var hints;
+  var ban;
+  var ban_time;
 
   $.ajax({
     url: "https://enigma3.herokuapp.com/solve/question",
@@ -32,6 +34,18 @@ $(document).ready(function(){
         $('#ques').append(message.data);
       }
       hint = message.hint;
+
+      if(message.ban==true){
+        hint = "not_found";
+        ban = true;
+        ban_time = message.ban_time;
+        showBan(true);
+      }
+      else{
+        ban = false;
+        showBan(false);
+      }
+
       if(hint!="not_found"){
         showHint();
       }
@@ -44,6 +58,40 @@ $(document).ready(function(){
     }
   }
 );
+
+function showBan(status) {
+  console.log(status);
+  if(status){
+    $("#ban-error").show();
+    showTimer(ban_time);
+  }
+  else{
+    $("#ban-error").hide();
+  }
+}
+
+function startTimer(duration, display) {
+    var timer = duration, hours, minutes, seconds;
+    setInterval(function () {
+        hours = ~~(timer/(1000*60*60));
+        minutes = ~~((timer - (hours*60*60*1000))/(60*1000));
+        seconds = ~~((timer - (hours*60*60*1000) - (minutes*60*1000))/1000);
+        display.textContent = ((hours < 10) ? ("0" + hours) : hours) + ":" + ((minutes < 10) ? ("0" + minutes) : minutes) + ":"
+          + ((seconds < 10) ? ("0" + seconds) : seconds);
+
+        timer = timer - 1000;
+
+        if(timer < 0){
+          timer = duration;
+        }
+    }, 1000);
+}
+
+function showTimer(timeLeft) {
+    var fiveMinutes = timeLeft,
+        display = document.querySelector('#ban-time');
+    startTimer(fiveMinutes, display);
+};
 
 function updateHints() {
   $("#hint-count").html(hints);
@@ -63,7 +111,7 @@ $("#answerForm").submit(function(e) {
   e.preventDefault();
   var answer = $("input#answer_id").val();
   $.ajax({
-    url: "https://enigma2.herokuapp.com/solve/answer",
+    url: "https://enigma3.herokuapp.com/solve/answer",
     type: "POST",
     datatype: "json",
     contentType: "application/json; charset=utf-8",
@@ -82,11 +130,14 @@ $("#answerForm").submit(function(e) {
 });
 
 $('#hint_bulb').click(function(e){
-  if(hint=='not_found' && hints>0){
+  if(ban){
+    confirm("Warning: Hints not available for alternate questions!");
+  }
+  else if(hint=='not_found' && hints>0){
     var a = confirm("Warning: You are using a hint!");
     if(a == true){
       $.ajax({
-        url: "https://enigma2.herokuapp.com/solve/hint",
+        url: "https://enigma3.herokuapp.com/solve/hint",
         type: "POST",
         datatype: "json",
         contentType: "application/json; charset=utf-8",
