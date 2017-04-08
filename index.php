@@ -54,12 +54,14 @@
     $("#cb_is_vit").click(function(){
 
       if(this.checked){
+        //console.log("Checked");
         $("#txt_external_college").hide();
         $("#uni_div").hide();
         document.getElementById("registration").disabled = false;
       }
 
       else {
+        //console.log("unChecked");
         $("#txt_external_college").show();
         $("#uni_div").show();
         document.getElementById("registration").disabled = true;
@@ -423,13 +425,17 @@
 
                     <ol style="color: white; list-style: decimal; list-style-position: inside; text-align: center;">
                       <li >The event shall be held over 2 days, from 9<sup>th</sup> to 11<sup>th</sup> April</li><br>
-                      <li>Participation is open to students of VIT University. Each participant represents himself/herself only.</li><br>
+                      <li style="letter-spacing: 1px;">Malpractice during the event will lead to disqualification.</li><br>
+                      <li style="letter-spacing: 1px;">Participation is open to everyone. Each participant represents himself/herself only.</li><br>
                       <li>The event entails an Online Cryptic Hunt in which participants must make their way through a series of levels filled with cryptic questions.</li><br>
                       <li>At each level, the participants will encounter a number of clues which shall, altogether, point to one answer. Each level has one and only one correct answer.</li><br>
                       <li style="letter-spacing: 1px;">Answers will always be lowercase, alphanumeric and may contain spaces. Special characters are allowed.</li><br>
+                    
                       <li>Official clues may be released on the Facebook event if and when deemed necessary by the organizers.</li><br>
-                      <li>Beware of the spelling you enter, we won't auto correct your spellings.</li><br>
-                      <li>Official clues may be released on the Facebook event if and when deemed necessary by the organizers.</li><br>
+                      <li style="letter-spacing: 1px;">Beware of the spelling you enter, we won't auto correct your spellings.</li><br>
+                      <li> The Organisers reserve the right to change the Rules of Competition.</li><br>
+                      
+
                     </ol>
 
                   </div>

@@ -5,7 +5,7 @@ $(document).ready(function(){
   var hints;
 
   $.ajax({
-    url: "https://enigma2.herokuapp.com/solve/question",
+    url: "https://enigma3.herokuapp.com/solve/question",
     type: "GET",
     datatype: "json",
     contentType: "application/json; charset=utf-8",
@@ -13,12 +13,23 @@ $(document).ready(function(){
     headers:{
       "x-access-token":x_access_token
     },
+
+    beforeSend: function(){
+      $("#image_id").hide();
+      $("#ques-loader").show();
+      $("#answerForm").hide();
+    },
+
     success: function(message, textStatus, request) {
+      $("#image_id").show();
+      $("#ques-loader").hide();
+      $("#answerForm").show();
       if(message.type == 'default'){
-        $('#ques').html("<h2 style=\"margin-top: -10px; margin-right: auto;margin-left: auto;\" id=\"question_id\">" + message.question + "</h2><img id=\"image_id\" src=\"" + message.image_url + "\" style=\"width: 20%; margin-right: auto;margin-left: auto; margin-top: 60px;\"/>");
+        $("#question_id").append("Q" + message.num +  " " + message.question);
+        $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\" style=\"max-height: 270px; max-width: 60%; margin-right: auto;margin-left: auto; margin-top: 10px;\"/>");
       }
       else {
-        $('#ques').html(message.data);
+        $('#ques').append(message.data);
       }
       hint = message.hint;
       if(hint!="not_found"){
@@ -29,6 +40,7 @@ $(document).ready(function(){
       updateHints();
       $('#score_id').html(message.score);
       num = message.num;
+
     }
   }
 );

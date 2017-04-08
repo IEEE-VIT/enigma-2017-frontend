@@ -91,7 +91,7 @@ limitations under the License
     </div>
 
     <main class="mdl-layout__content " id="main" style="background-color:black;" >
-      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid" style="color;">
+      <div class="demo-charts mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" id="bg-ques-vid">
         <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
         <span id="scorehint" style="">
@@ -103,14 +103,14 @@ limitations under the License
         <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
 
         <div class="col-md-8" id="ques">
-          <div id="ban-error" style="margin-top: -5%">
+          <div id="ban-error" style="margin-top: -5%; display: none;">
             <div class='alert alert-danger' style="margin-left: auto; margin-right: auto; width: 50%; background-color: #9a2424; border-color: #9a2424; color: #f3f3f3">
                
               You have been temporarily banned! CHEATER?
             </div>
           </div>
-          <h2 style="margin-top: 10px; margin-: auto;margin-left: auto;color: white; margin-bottom: 10px" id="question_id">Question Placeholder</h2>
-          <img src="images/dog.png">
+          <h2 style="margin-top: 10px; margin-: auto;margin-left: auto;color: white; margin-bottom: 10px; font-size: x-large;" id="question_id"></h2>
+          <img src="../img/login.gif" id="ques-loader">
         </div>
 
         <!-- Answer Textfield -->
