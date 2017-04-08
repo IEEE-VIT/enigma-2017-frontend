@@ -18,6 +18,7 @@ $(document).ready(function(){
 
     beforeSend: function(){
       $("#image_id").hide();
+      $("#ban-error").hide();
       $("#ques-loader").show();
       //$("#answerForm").hide();
     },
@@ -28,7 +29,7 @@ $(document).ready(function(){
       //$("#answerForm").show();
       if(message.type == 'default'){
         $("#question_id").append("Q" + message.num +  " " + message.question);
-        $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\" style=\"max-height: 270px; max-width: 60%; margin-right: auto;margin-left: auto; margin-top: 10px;\"/>");
+        $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\"/>");
       }
       else {
         $('#ques').append(message.data);
