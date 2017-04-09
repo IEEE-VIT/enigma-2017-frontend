@@ -12,7 +12,7 @@ $(document).ready(function(){
         "x-access-token":x_access_token
       },
 
-      beforeSend: function{
+      beforeSend: function(){
         $("#ques-loader").show();
       },
       success: function(message, textStatus, request) {
@@ -24,6 +24,5 @@ $(document).ready(function(){
         }
         $('#table_body').append(string);
       }
-    }
-  );
+    });
 });
