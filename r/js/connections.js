@@ -88,8 +88,8 @@ $(document).ready(function(){
 );
 
 function showModal(message){
-  modal.style.display = "block";
-  $('#notification_box').html(message);
+  //modal.style.display = "block";
+  $('#notification_box').html(message.message);
 }
 
 function showBan(status) {
