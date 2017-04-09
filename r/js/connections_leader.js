@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   console.log("Document Ready!");
   var x_access_token = Cookies.get('x-access-token');
   var num;
@@ -25,5 +25,10 @@ $(document).ready(function(){
         }
         $('#table_body').append(string);
       }
+    });
+
+    $('#logout_butt a').click(function(e) {
+      Cookies.remove('x-access-token');
+      window.location.replace("../index.php");
     });
 });
