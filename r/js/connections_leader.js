@@ -11,7 +11,12 @@ $(document).ready(function(){
       headers:{
         "x-access-token":x_access_token
       },
+
+      beforeSend: function{
+        $("#ques-loader").show();
+      },
       success: function(message, textStatus, request) {
+        $("#ques-loader").hide();
         var i = 0;
         var string = "";
         for(i=0; i<=message.result.length-1; i++){
