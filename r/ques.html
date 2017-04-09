@@ -95,17 +95,12 @@ limitations under the License
         <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
         <span id="scorehint" style="">
-          <span id="score_id">100 </span> <img src="images/star.png" style="max-height: 20px;margin-top: -8px;">
-          <span id="hint-count">20 </span><img src="images/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
+          <span id="score_id"></span> <img src="images/star.png" style="max-height: 20px;margin-top: -8px;">
+          <span id="hint-count"></span><img src="images/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
           </span>
         </span>
 
         <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
-        <div id="ban-error" style="margin-top: -5%" class="col-md-12">
-          <div class='alert alert-danger' style="display: inline-block; width: 50%; background-color: #9a2424; border-color: #9a2424; color: #f3f3f3">
-            You have been temporarily banned! Either solve the alternate question below or wait for <span id="ban-time"></span> hours.
-          </div>
-        </div>
 
         <div class="col-md-8" id="ques">
 
@@ -139,8 +134,12 @@ limitations under the License
 
 
           <div class="popup">
-            <span class="popuptext" id="hint-popup"><p style="margin-bottom: 0px;">0,lorem ipsum dolor,lorem ipsum dolor,lorem ipsum dolor,lorem ipsum dolor</p></span>
+            <span class="popuptext" id="hint-popup"><p style="margin-bottom: 0px;"></p></span>
           </div>
+
+
+
+          <!--<h3 style="font-size: x-large; color: #c5c2c3" id="close-message">You are close</h3>-->
 
          <!--  <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
@@ -149,11 +148,18 @@ limitations under the License
 
             <strong style="color:white;">...</strong></p> -->
         </form>
+        <div id="ban-error" style="margin-top: -5%" class="col-md-12">
+          <div class='alert alert-danger' id="ban-div">
+            You have been temporarily banned! Either solve the alternate question below or wait for <span id="ban-time"></span> time.
+          </div>
+        </div>
+
+        <!--
 
         <span id="trophy-span">
 
           <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
-        </span>
+        </span> -->
         <!-- Question
           <div  class="popup_ld">
             <span class="popuptext_ld" id="mini-lead">

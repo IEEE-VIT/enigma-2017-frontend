@@ -29,7 +29,7 @@ $(document).ready(function(){
   var ban_time;
 
   $.ajax({
-    url: "https://enigma3.herokuapp.com/solve/question",
+    url: "https://enigma2.herokuapp.com/solve/question",
     type: "GET",
     datatype: "json",
     contentType: "application/json; charset=utf-8",
@@ -144,7 +144,7 @@ $("#answerForm").submit(function(e) {
   e.preventDefault();
   var answer = $("input#answer_id").val();
   $.ajax({
-    url: "https://enigma3.herokuapp.com/solve/answer",
+    url: "https://enigma2.herokuapp.com/solve/answer",
     type: "POST",
     datatype: "json",
     contentType: "application/json; charset=utf-8",
@@ -176,7 +176,7 @@ $('#hint_bulb').click(function(e){
     var a = confirm("Warning: You are using a hint!");
     if(a == true){
       $.ajax({
-        url: "https://enigma3.herokuapp.com/solve/hint",
+        url: "https://enigma2.herokuapp.com/solve/hint",
         type: "POST",
         datatype: "json",
         contentType: "application/json; charset=utf-8",

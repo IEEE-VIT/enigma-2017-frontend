@@ -42,7 +42,7 @@ $(document).ready(function(){
         //redirect to the question page on successful login
         //For now, redirecting to Countdown page
         if(message.code == '0'){
-          window.location.replace("./r/countdown.html");
+          window.location.replace("./r/ques.html");
         }
         $('#success_login').html("<div class='alert alert-success'>");
         $('#success_login > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")

@@ -195,6 +195,13 @@
   width: 80%;
  	z-index: 100;
 }
+#ban-div {
+	display: inline-block; 
+	width: 50%; 
+	background-color: #9a2424; 
+	border-color: #9a2424; 
+	color: #f3f3f3;
+}
 
 #modal_message {
 	margin-top: 7%;
@@ -232,6 +239,10 @@
     #image_id {
     	margin-top: 10px;
     	width: 90%;
+    }
+
+    #ban-div {
+    	width: 100%;
     }
 
     /*#trophy {
@@ -277,7 +288,7 @@
 		width: 250px;
 	    z-index: 1;
 	    left: 50%;
-	    margin-left: -170px;
+	    margin-left: -150px;
 	}
 	.popup .popuptext::after {
 	    content: "";
@@ -294,7 +305,7 @@
 	    visibility: visible;
 	    -webkit-animation: fadeIn 1s;
 	    animation: fadeIn 1s;
-	    margin-top: -116px;
+	    margin-top: 15px;
 	}
 
 	.sidenav a {
