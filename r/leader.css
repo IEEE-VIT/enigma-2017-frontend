@@ -37,7 +37,15 @@ th {
 .glyphicon-th-list:before {
   content: "\e012";
 }
-
+#lead-main-div {
+    min-height: 90vh;
+    text-align: center;
+    background-image: url(images/video-ques.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: overlay;
+}
 
 table {
   background-color: transparent;

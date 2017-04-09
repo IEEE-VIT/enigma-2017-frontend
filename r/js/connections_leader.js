@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
   console.log("Document Ready!");
   var x_access_token = Cookies.get('x-access-token');
   var num;
@@ -20,7 +21,7 @@ $(document).ready(function(){
         var i = 0;
         var string = "";
         for(i=0; i<=message.result.length-1; i++){
-          string = string + "<tr><td>" + (i+1)  + "</td><td>" + message.result[i].name + "</td><td>" + ((message.result[i].college_id == null || message.result[i].college_id == 'vit_university_vellore') ? "VIT University" : message.result[i].college_id) + "</td><td>" + message.result[i].score + "</td><td>" + message.result[i].num + "</td></tr>"
+          string = string + "<tr><td>" + (i+1)  + "</td><td>" + message.result[i].name + "</td><td>" + ((message.result[i].college_id == null || message.result[i].college_id == 'vit_university_vellore') ? "VIT University" : message.result[i].college_id) + "</td><td>" + message.result[i].score + "</td><td>" + (message.result[i].num+1) + "</td></tr>"
         }
         $('#table_body').append(string);
       }
