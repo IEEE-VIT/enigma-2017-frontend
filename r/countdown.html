@@ -30,7 +30,9 @@
   <script type="text/javascript" src="../js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
   <script type="text/javascript" src="../js/js.cookie.js"></script>
-
+  <script type="text/javascript">
+    window.location.replace("./ques.html");
+  </script>
   <script type="text/javascript">
   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
   function openNav() {
@@ -74,56 +76,56 @@
 
 
           <h2 id="countdd" class="clock2"></h2>
-            <script type="text/javascript">
-              var clock;
+          <script type="text/javascript">
+          var clock;
 
-              $(document).ready(function() {
-                // Set dates.
-                var futureDate  = new Date("April 9, 2017 06:50 AM EDT");
-                var currentDate = new Date();
+          $(document).ready(function() {
+            // Set dates.
+            var futureDate  = new Date("April 9, 2017 06:50 AM EDT");
+            var currentDate = new Date();
 
-                // Calculate the difference in seconds between the future and current date
-                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+            // Calculate the difference in seconds between the future and current date
+            var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
-                // Calculate day difference and apply class to .clock for extra digit styling.
-                function dayDiff(first, second) {
-                  return (second-first)/(1000*60*60*24);
-                }
-                $('.clock').addClass('twoDayDigits');
-                $('.clock2').addClass('twoDayDigits');
-                $('.clock3').addClass('twoDayDigits');
-                $('.clock4').addClass('twoDayDigits');
-                if(diff < 0) {
-                  diff = 0;
-                }
+            // Calculate day difference and apply class to .clock for extra digit styling.
+            function dayDiff(first, second) {
+              return (second-first)/(1000*60*60*24);
+            }
+            $('.clock').addClass('twoDayDigits');
+            $('.clock2').addClass('twoDayDigits');
+            $('.clock3').addClass('twoDayDigits');
+            $('.clock4').addClass('twoDayDigits');
+            if(diff < 0) {
+              diff = 0;
+            }
 
-                // Instantiate a coutdown FlipClock
-                clock = $('.clock').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                 clock = $('.clock2').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                  clock = $('.clock3').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                    clock = $('.clock4').FlipClock(diff, {
-                  clockFace: 'DailyCounter',
-                  countdown: true
-                });
-                $(".flip-clock-label").hide();
-              });
-            </script>
+            // Instantiate a coutdown FlipClock
+            clock = $('.clock').FlipClock(diff, {
+              clockFace: 'DailyCounter',
+              countdown: true
+            });
+            clock = $('.clock2').FlipClock(diff, {
+              clockFace: 'DailyCounter',
+              countdown: true
+            });
+            clock = $('.clock3').FlipClock(diff, {
+              clockFace: 'DailyCounter',
+              countdown: true
+            });
+            clock = $('.clock4').FlipClock(diff, {
+              clockFace: 'DailyCounter',
+              countdown: true
+            });
+            $(".flip-clock-label").hide();
+          });
+          </script>
 
         </div>
         <div id= "footer-img">
           <img src="images/footer-logo.jpg" width="70%" height="70%">
         </div>
 
-       </div>
+      </div>
     </main>
   </div>
 
