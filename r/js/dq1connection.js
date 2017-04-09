@@ -1,4 +1,4 @@
- $("#answer_id").on('keydown', function(e)
+ $("#answer_id").on('keyup', function(e)
                {
                
                var defaultStr = '.,pyfgcrl/aoeuidhtns-;qjkxbmwvz';
