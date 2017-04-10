@@ -31,7 +31,7 @@ $(document).ready(function(){
         "x-access-token":x_access_token
       },
       success: function(message, textStatus, request) {
-        $("#latest_ques").append(message.message.num);
+        $("#latest_ques").append(message.message.num+1);
       }
     }
   );

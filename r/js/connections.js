@@ -50,8 +50,14 @@ $(document).ready(function(){
       $("#ques-loader").hide();
       $("#answerForm").show();
       if(message.type == 'default'){
-        $("#question_id").append("Q" + (message.num + 1) +  " " + message.question);
-        $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\"/>");
+        if(message.image_url == "" || message.image_url == null){
+          $("#question_id").append("Q" + (message.num + 1) +  " " + message.question);
+        }
+        else {
+          $("#question_id").append("Q" + (message.num + 1) +  " " + message.question);
+          $('#ques').append("<img id=\"image_id\" src=\"" + message.image_url + "\"/>");
+        }
+
       }
       else {
         $('#ques').append(message.data);
