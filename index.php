@@ -400,7 +400,7 @@
                       <p>
                         “The path lies empty, epiphany seeks the devoted”
                       </p>
-                                             
+
                       <p>We’ve been waiting, we’ve been watching and now the most awaited cryptic hunt is back. Enigma 2017, a second edition of its kind, this time on an    international platform. The search for highly intelligent individuals continues as Enigma 2.0 launches its pressure tests on participants from around the world with its puzzles and ciphers. The questions will differ vastly in their nature and require different types of logic to be employed in order to decrypt them – no technical skills required, just the ability to think out of the box!
                       </p>
                       <p>
@@ -430,11 +430,11 @@
                       <li>The event entails an Online Cryptic Hunt in which participants must make their way through a series of levels filled with cryptic questions.</li><br>
                       <li>At each level, the participants will encounter a number of clues which shall, altogether, point to one answer. Each level has one and only one correct answer.</li><br>
                       <li style="letter-spacing: 1px;">Answers will always be lowercase, alphanumeric and may contain spaces. Special characters are allowed.</li><br>
-                    
+
                       <li>Official clues may be released on the Facebook event if and when deemed necessary by the organizers.</li><br>
                       <li style="letter-spacing: 1px;">Beware of the spelling you enter, we won't auto correct your spellings.</li><br>
                       <li> The Organisers reserve the right to change the Rules of Competition.</li><br>
-                      
+
 
                     </ol>
 
@@ -486,7 +486,7 @@
                 <div class="section-title center">
                   <h2>Sponsored by</h2>
                   <hr>
-                  <img src="img/tony_logo.png" height="400" id="tony">
+                  <a href="https://www.facebook.com/toniandguy.vellore/" target=_blank><img src="img/tony_logo.png" height="400" id="tony"></a>
                   <div class="rules-text" >
                   </div>
                   <p class="scrollto--arrow" id="sponsor-arrow"><a href="#contact_us" class="page-scroll"><img src="img/down.png" alt="scroll down arrow" style="margin-top: -30px;"></a></p>
