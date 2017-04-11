@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  showTimer_end();
+
   //console.log($('#registerForm'));
   // Get the modal
   var modal = document.getElementById('myModal');
@@ -63,6 +66,7 @@ $(document).ready(function(){
         $('#ques').append(message.data);
       }
       hint = message.hint;
+      console.log("Hey: -" + message.ban_time);
 
       if(message.ban==true){
         hint = "not_found";
@@ -131,6 +135,17 @@ function showTimer(timeLeft) {
   display = document.querySelector('#ban-time');
   startTimer(fiveMinutes, display);
 };
+
+function showTimer_end() {
+  var deadline = 'April 12 2017 23:59:59 GMT+0530';
+  var booMinutes  = Date.parse(deadline) - Date.parse(new Date());
+  var display = document.querySelector('#end-time');
+  startTimer(booMinutes, display);
+}
+
+
+  
+
 
 function updateHints() {
   $("#hint-count").html(hints);

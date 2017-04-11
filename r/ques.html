@@ -32,7 +32,7 @@
   /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    console.log("Close");
+    //console.log("Close");
     document.body.style.backgroundColor = "white";
     document.getElementById("hamburger").style.display = "block";
   }
@@ -58,9 +58,9 @@
 <body style="background-color: white;">
   <div class="mdl-layout__container" style="background:white;"><div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout" style="color:white;">
 
-    <div id="mySidenav" class="sidenav" style="text-align: center;">
+    <div id="mySidenav" class="sidenav" style="text-align: center; width: 20%">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a>
-      <div style="margin-left: 10px;">
+      <div style="margin-left: -10px;">
         <a href="#" style="margin-top: 40px;color:white;" class="sidenav-font">Home</a>
         <br style="padding:10px;margin-left:20px;margin-right:50px;">
         <div id="leader_butt">
@@ -70,9 +70,10 @@
         <div id="logout_butt">
           <a href="#" style="color:white;" class="sidenav-font">Logout</a>
         </div>
-        <div style="margin-top: 100%">
+        <div style="margin-top: 80%">
         <a href="https://www.facebook.com/pg/IEEEVIT/posts/" target="_blank"><img src="images/icon.png"></a>
           <a href="http://www.ieeevit.com" target="_blank">&copy; IEEE-VIT</a>
+          <a href="">SpaceApps(NASA)</a>
 
         </div>
       </div>
@@ -91,10 +92,11 @@
         </span>
 
         <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
+        <p class="col-md-12" style="margin-top: -11px; margin-bottom: 26px; margin-right: auto;margin-left: auto;">The hunt will end in: <span id="end-time"></span></p>
 
         <div class="col-md-8" id="ques">
 
-          <h2 style="margin-top: 10px; margin-: auto;margin-left: auto;color: white; margin-bottom: 10px; font-size: x-large;" id="question_id"></h2>
+          <!--<h2 style="margin-top: 10px; margin-: auto;margin-left: auto;color: white; margin-bottom: 10px; font-size: x-large;" id="question_id"></h2> -->
           <img src="../img/ques.gif" id="ques-loader">
 
         </div>
@@ -105,7 +107,7 @@
         <!-- Modal content -->
         <div class="login modal-content" id="">
           <span class="close" style="opacity: 0.8; color: white; text-shadow: none;">&times;</span>
-          <h3 style="margin: 0 0;"><span id="">You are close</span></h3>
+          <h3 style="margin: 0 0;"><span id="close-message">You are close</span></h3>
 
         </div>
       </div>
@@ -131,7 +133,7 @@
 
 
 
-          <!--<h3 style="font-size: x-large; color: #c5c2c3" id="close-message">You are close</h3>-->
+          <!--<h3 style="font-size: x-large; color: #c5c2c3" id="">You are close</h3>-->
 
         </form>
         <div id="ban-error" style="margin-top: -5%" class="col-md-12">
@@ -144,37 +146,8 @@
 
         <span id="trophy-span">
 
-          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
+          <img src="images/trophy.png"style="max-height:50px;padding-bottom:10px;">
         </span> -->
-        <!-- Question
-          <div  class="popup_ld">
-            <span class="popuptext_ld" id="mini-lead">
-              <table class="table" id="mini-result_table">
-                <thead>
-                  <tr>
-                    <td><strong>Username</strong></td>
-                    <td><strong>Rank</strong></td>
-                  </tr>
-                </thead>
-                <tbody id="mini-table_body">
-                  <tr>
-                    <td>Arushit</td>
-                    <td>1</td>
-                  </tr>
-                   <tr>
-                    <td>Sahir</td>
-                    <td>2</td>
-                  </tr>
-                   <tr>
-                    <td>Karishnu</td>
-                    <td>3</td>
-                  </tr>
-                </tbody>
-              </table>
-            </span>
-          </div>
-        -->
-
         <script>
         // When the user clicks on div, open the popup
         function popup() {
