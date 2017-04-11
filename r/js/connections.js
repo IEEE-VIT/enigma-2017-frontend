@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
-  showTimer_end();
-
-  //console.log($('#registerForm'));
+  var deadline = 'April 12 2017 23:59:59 GMT+0530';
+  var booMinutes  = Date.parse(deadline) - Date.parse(new Date());
+  var display = document.querySelector('#end-time');
+  startTimer(booMinutes, display);  
+  
   // Get the modal
   var modal = document.getElementById('myModal');
   modal.style.display = "none";
@@ -62,11 +64,10 @@ $(document).ready(function(){
         }
 
       }
-      else {
+      else if(message.num == 20){
         questiontwentytwo();
       }
       hint = message.hint;
-      console.log("Hey: -" + message.ban_time);
 
       if(message.ban==true){
         hint = "not_found";
@@ -98,8 +99,8 @@ $(document).ready(function(){
 );
 
 function showModal(message){
-  //modal.style.display = "block";
-  $('#notification_box').html(message.message);
+  $('#notification_box').html(message);
+  modal.style.display = "block";
 }
 
 function showBan(status) {
@@ -135,17 +136,6 @@ function showTimer(timeLeft) {
   display = document.querySelector('#ban-time');
   startTimer(fiveMinutes, display);
 };
-
-function showTimer_end() {
-  var deadline = 'April 12 2017 23:59:59 GMT+0530';
-  var booMinutes  = Date.parse(deadline) - Date.parse(new Date());
-  var display = document.querySelector('#end-time');
-  startTimer(booMinutes, display);
-}
-
-
-  
-
 
 function updateHints() {
   $("#hint-count").html(hints);
@@ -229,6 +219,7 @@ $('#hint_bulb').click(function(e){
 });
 
 function questiontwentytwo() {
+  $("#answer_id").attr('type', 'password');
   $("#answer_id").on('keyup', function(e)
   {
 
