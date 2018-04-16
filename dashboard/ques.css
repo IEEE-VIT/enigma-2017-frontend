@@ -87,7 +87,7 @@
 #bg-ques-vid {
 	height: 90vh;
 	text-align: center;
-	background-image: url("images/video-ques.gif");
+	background-image: url("img/video-ques.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: overlay;

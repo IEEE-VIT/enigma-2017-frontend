@@ -31,7 +31,7 @@
 #bg-cd {
   height: 80vh; 
   text-align: center;
-  background-image:url(images/logo.png);
+  background-image:url(img/logo.png);
   background-position:center;
 }
 #footer-img {
@@ -154,7 +154,7 @@ html, body {
 
 @media( max-width: 950px){
   #bg-cd {
-    background-image:url(images/back_mobile.png);
+    background-image:url(img/back_mobile.png);
   }
 
   #footer-img {

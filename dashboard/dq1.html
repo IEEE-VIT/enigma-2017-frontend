@@ -17,7 +17,7 @@ limitations under the License
 -->
 <html lang="en">
 
-<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:20:10 GMT -->
+<!-- Mirrored from www.enigma.ieeevit.com/dashboard/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:20:10 GMT -->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@ limitations under the License
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Enigma 2017">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.html">
+  <link rel="apple-touch-icon-precomposed" href="img/ios-desktop.html">
 
   <link rel="stylesheet" href="leader.css">
   <link rel="stylesheet" href="../css/bootstrap.css">
@@ -95,16 +95,16 @@ limitations under the License
         <span style="font-size:25px;cursor:pointer; position: absolute; left: 40px; top: 50px;color:white;" id="hamburger" onclick="openNav()">☰</span>
 
         <span id="scorehint" style="">
-          <span id="score_id">100 </span> <img src="images/star.png" style="max-height: 20px;margin-top: -8px;">
-          <span id="hint-count">20 </span><img src="images/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
+          <span id="score_id">100 </span> <img src="img/star.png" style="max-height: 20px;margin-top: -8px;">
+          <span id="hint-count">20 </span><img src="img/bulby.png" id="hint_count" alt="Hint Button" style="max-width:17px;cursor: pointer;max-height:25px;margin-bottom: 7px;">
           </span>
         </span>
         
-        <div id="head-logo"><img id="enigma_logo" src="images/lgoo.png"></div>
+        <div id="head-logo"><img id="enigma_logo" src="img/lgoo.png"></div>
 
         <div class="col-md-8" id="ques">
           <h2 style="margin-top: 10px; margin-right: auto;margin-left: auto;color: white;" id="question_id">Question Placeholder</h2>
-          <img src="images/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 40px;">
+          <img src="img/dog.png" style="margin-right: auto;margin-left: auto; margin-top: 40px;">
         </div>
 
         <!-- Answer Textfield -->
@@ -121,8 +121,8 @@ limitations under the License
           <!-- Submit Button -->
             
           
-            <input type="image" src="images/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;margin-left: 5px; margin-bottom: -2%;"/>
-             <img src="images/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
+            <input type="image" src="img/submit.png" style="max-width:30px;cursor: pointer;max-height:30px;margin-left: 5px; margin-bottom: -2%;"/>
+             <img src="img/bulby.png" id="hint_bulb" alt="Hint Button" style="max-width:30px;cursor: pointer;max-height:30px;vertical-align:middle;margin-left: 5px;margin-top: -4px;" onclick="hint()">
             
           
           <div class="popup">
@@ -131,13 +131,13 @@ limitations under the License
          <!--  <p style="margin-top: 3%; font-size: 20px;">
             <strong style="color:white;">...</strong>
         
-            <img src="images/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;"> 
+            <img src="img/ieee.gif" class="lock-img" id="bg-lock" style="height:30px;width:80px;margin-bottom:-15px;">
         
             <strong style="color:white;">...</strong></p> -->
         </form>
         
         <span id="trophy-span">
-          <img src="images/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
+          <img src="img/trophy.png" id="trophy" style="max-height:50px;padding-bottom:10px;" onclick="popup()">
         </span>
         
           <div  class="popup_ld">
@@ -173,8 +173,8 @@ limitations under the License
         function hint() {
           var a =confirm("Warning: You are using a hint!");
           if(a == true){
-            $("#hint_bulb").attr("src","images/bulb-glow.png");
-            $("#hint_count").attr("src","images/bulb-glow.png");
+            $("#hint_bulb").attr("src","img/bulb-glow.png");
+            $("#hint_count").attr("src","img/bulb-glow.png");
             var popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
           }
@@ -205,5 +205,5 @@ limitations under the License
 
 </body>
 
-<!-- Mirrored from www.enigma.ieeevit.com/r/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:21:01 GMT -->
+<!-- Mirrored from www.enigma.ieeevit.com/dashboard/ques.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2017 13:21:01 GMT -->
 </html>

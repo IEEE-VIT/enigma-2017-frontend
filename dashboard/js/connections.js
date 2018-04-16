@@ -93,7 +93,7 @@ $(document).ready(function(){
 
     error: function(){
       $("#ques-loader").hide();
-      $('#ques').append("<img id=\"image_id\" src=\"images/net-error.png\"/>");
+      $('#ques').append("<img id=\"image_id\" src=\"img/net-error.png\"/>");
     }
   }
 );
@@ -279,8 +279,8 @@ function questiontwentytwo() {
 }
 
 function showHint() {
-  $("#hint_bulb").attr("src","images/bulb-glow.png");
-  $("#hint_count").attr("src","images/bulb-glow.png");
+  $("#hint_bulb").attr("src","img/bulb-glow.png");
+  $("#hint_count").attr("src","img/bulb-glow.png");
   $("#hint-popup").html(hint);
   $("#hint-popup").append(" ");
   var popup = document.getElementById("hint-popup");
