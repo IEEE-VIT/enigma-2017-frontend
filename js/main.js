@@ -32,12 +32,21 @@ function main() {
 }());
 
 }
+var tag;
 function popup() {
+    $('.popup').show();
     var popup = document.getElementById("myPopup");
-    $('#myBtn').click(function () {
-        $('.popup').show();
-    });
+    console.log("CLICKED MYbTN");
+    if ( $('.popup').css('display') == 'none' ){
+        tag=1;
+    }
+    if(tag==1)
+    {
+        tag=0;
+        popup.classList.toggle("show");
+    }
     popup.classList.toggle("show");
+
 }
 main();
 
