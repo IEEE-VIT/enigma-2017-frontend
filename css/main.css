@@ -584,90 +584,28 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   width: 80%;
  	z-index: 100;
 }
-/* .login:after,
-.login:before {
-	background: #fff;
-	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-	border: 1px solid #c4c6ca;
-	content: "";
-	display: block;
-	height: 100%;
-	left: -1px;
-	position: absolute;
-	width: 100%;
-}
-#login:after {
-	-webkit-transform: rotate(2deg);
-	-moz-transform: rotate(2deg);
-	-ms-transform: rotate(2deg);
-	-o-transform: rotate(2deg);
-	transform: rotate(2deg);
-	top: 0;
-	z-index: -2;
-}
-#login:before {
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	top: 0;
-	z-index: -1; 
-}
-#register:after {
-	-webkit-transform: rotate(2deg);
-	-moz-transform: rotate(2deg);
-	-ms-transform: rotate(2deg);
-	-o-transform: rotate(2deg);
-	transform: rotate(2deg);
-	top: 0;
-	z-index: -1;
-}
-#register:before {
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	top: 0;
-	z-index: -2;
-} */
 
 
-/* Contact us Section #0f2c31 */
-.dark_btn {
-	color: #111013;
-	border-color: #000000;
-}
-#contact_us {
-	padding: 50px 0 0;
-	background: #f6f6f6;
-	/*background: -moz-linear-gradient(top, rgba(15,44,49,1) 0%, rgba(73, 149, 165,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(15,44,49,1) 0%,rgba(73, 149, 165,1) 100%);
-    background: -o-linear-gradient(top, rgba(15,44,49,1) 0%,rgba(73, 149, 165,1) 100%);
-    background: -ms-linear-gradient(top, rgba(15,44,49,1) 0%,rgba(73, 149, 165,1) 100%); */
-}
+/*#contact_us h3 {*/
+	/*color: #eef6f7;*/
+/*}*/
 
-#contact_us h3 {
-	color: #eef6f7;
-}
+/*#contact_us h2 ,#contact_us p{*/
+	/*color: #111013;*/
+/*}*/
 
-#contact_us h2 ,#contact_us p{
-	color: #111013;
-}
-
-#contact_us hr {
-	background: #111013;
-}
-#contact_us .contact_us {
-	margin-bottom: 40px;
-	text-align: center;
-	padding: 0px;
-}
-#contact_us .contact_us h4 {
-	font-weight: 600;
-	color: #fff;
-}
+/*#contact_us hr {*/
+	/*background: #111013;*/
+/*}*/
+/*#contact_us .contact_us {*/
+	/*margin-bottom: 40px;*/
+	/*text-align: center;*/
+	/*padding: 0px;*/
+/*}*/
+/*#contact_us .contact_us h4 {*/
+	/*font-weight: 600;*/
+	/*color: #fff;*/
+/*}*/
 
 
 
