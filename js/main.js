@@ -34,6 +34,9 @@ function main() {
 }
 function popup() {
     var popup = document.getElementById("myPopup");
+    $('#myBtn').click(function () {
+        $('.popup').show();
+    });
     popup.classList.toggle("show");
 }
 main();
