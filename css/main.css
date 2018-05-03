@@ -570,7 +570,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #login , #register {
 	position: relative;
 }
-
+#loginButton{
+	color:white !important;
+}
 
 .login {
   background: #fff;
