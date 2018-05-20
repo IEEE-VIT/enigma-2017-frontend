@@ -419,7 +419,7 @@ hr {
     background: -ms-linear-gradient(top, rgba(15,44,49,1) 0%,rgba(73, 149, 165,1) 100%);
 }
 
-#tony {
+#sponsorImg{
 	margin-right: 20px; 
 	margin-top: -40px;
 }
@@ -672,7 +672,7 @@ header .intro-text {
 }
 
 @media (max-width: 991px) {
-	#tony {
+	#sponsorImg {
 		height: 190px;
 		margin-top: 0px;
 		margin-bottom: 40px;
