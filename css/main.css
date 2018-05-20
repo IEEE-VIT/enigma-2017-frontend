@@ -370,7 +370,9 @@ hr {
     background: -ms-linear-gradient(top, rgba(15,44,49,1) 0%,rgba(73, 149, 165,1) 100%);
 }
 
-
+.rules-text{
+	padding:3vh;
+}
 #rules h2 ,#rules p{
 	color: #e6e3ec;
 }
